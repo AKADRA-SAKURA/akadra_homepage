@@ -5,12 +5,13 @@ class header extends React.Component {   //page1クラスにReact.Componentを�
     render() {                          //画面表示の為のrenderメソッドを定義する
         return (
             <div>
-                <Link to={`/about`}>Go To about</Link>
-                <Link to={`/web`}>Go To web</Link>
-                <Link to={`/game`}>Go To game</Link>
-                <Link to={`/dtm`}>Go To dtm</Link>
-                <Link to={`/graphic`}>Go To graphic</Link>
-                <Link to={`/other`}>Go To other</Link>
+                <Link to={`/`}>AKADRA Archives</Link>
+                <Link to={`/about`}>about</Link>
+                <Link to={`/web`}>web</Link>
+                <Link to={`/game`}>Game</Link>
+                <Link to={`/dtm`}>DTM</Link>
+                <Link to={`/graphic`}>Graphic</Link>
+                <Link to={`/other`}>other</Link>
             </div>
         );
     }
