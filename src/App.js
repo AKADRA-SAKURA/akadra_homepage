@@ -9,10 +9,12 @@ import graphic from './graphic';
 import other from './other';
 import Header from './header';
 
+
+
 class App extends React.Component {
   render(){
     return(
-      <BrowserRouter class="all">
+      <BrowserRouter>
         <Header></Header>
         <Switch>
           <Route exact path="/" component={home} />
