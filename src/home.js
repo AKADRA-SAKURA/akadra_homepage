@@ -1,8 +1,22 @@
-import React from 'react';              //Reactを読み込んでいる
+import React from 'react';
+import { Button } from "@mui/material";
 import './box_container.css';
 import './home.css';
 
 import Yt from './youtube';
+
+import { createTheme } from '@mui/material/styles';
+
+const myTheme = createTheme({
+  palette: {
+    primary: {
+      main: "#e0e0e0",
+    },
+　　secondary: {
+      main: "#424242",
+    },
+  },
+});
 
 class home extends React.Component {   //page1クラスにReact.Componentを継承する
     render() {                          //画面表示の為のrenderメソッドを定義する
@@ -44,8 +58,8 @@ class home extends React.Component {   //page1クラスにReact.Componentを継�
                 <h2>ブログ</h2>
                 <hr/>
                 外部サイト「はてなブログ」にてブログをやっています。<br/>
-                <a href="https://blog-akadra-cometdays9.hatenablog.com/">Go to 「AKADRA's DIARY」</a>
-                <a href="https://zeusuakaneblog.hatenablog.com/">Go to 「AKADRA's DIARY」</a>
+                <Button variant="contained" theme={myTheme}><a href="https://blog-akadra-cometdays9.hatenablog.com/">Go to 「AKADRA's DIARY」</a></Button>
+                <Button variant="contained" theme={myTheme}><a href="https://zeusuakaneblog.hatenablog.com/">Go to 「AKADRA's DIARY」</a></Button>
             </div>
         </div>
         );
