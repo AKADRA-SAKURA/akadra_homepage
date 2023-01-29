@@ -60,7 +60,7 @@ class home extends React.Component {   //page1クラスにReact.Componentを継�
                     <hr/>
                     外部サイト「はてなブログ」にてブログをやっています。<br/>
                     <Button variant="contained" theme={myTheme}><a href="https://blog-akadra-cometdays9.hatenablog.com/">Go to 「AKADRA's DIARY」</a></Button>
-                    <Button variant="contained" theme={myTheme}><a href="https://zeusuakaneblog.hatenablog.com/">Go to 「AKADRA's DIARY」</a></Button>
+                    <Button variant="contained" theme={myTheme}><a href="https://zeusuakaneblog.hatenablog.com/">Go to 「AKADRAのなぐりがき」</a></Button>
                 </div>
             </div>
         </div>
