@@ -9,6 +9,8 @@ import graphic from './graphic';
 import other from './other';
 import Header from './header';
 
+
+
 class App extends React.Component {
   render(){
     return(
@@ -22,6 +24,7 @@ class App extends React.Component {
           <Route exact path="/dtm" component={dtm} />
           <Route exact path="/graphic" component={graphic} />
           <Route exact path="/other" component={other} />
+          <canvas id="canvas"></canvas>
         </Switch>
       </BrowserRouter>
     );

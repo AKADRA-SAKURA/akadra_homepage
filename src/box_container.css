@@ -1,0 +1,18 @@
+.box{
+    margin: 2%;
+    padding: 5%;
+    border: 2px solid #2D2525;
+    background-color: rgba(0,0,0,0.7);
+    color: #CFC7C2;
+  }
+
+  hr {
+    height: 2px;
+    background-color: rgba(45,37,37, 1);
+    border: none;
+}
+.bg{
+  margin: 0;
+  padding-top: 2%;
+  background-color: rgba(45,37,37, 0.5);
+}
