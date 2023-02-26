@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from "@mui/material";
 import './box_container.css';
 import './home.css';
+import './background.css';
 
 import Yt from './youtube';
 
@@ -59,9 +60,24 @@ class home extends React.Component {   //page1クラスにReact.Componentを継�
                     <h2>ブログ</h2>
                     <hr/>
                     外部サイト「はてなブログ」にてブログをやっています。<br/>
-                    <Button variant="contained" theme={myTheme}><a href="https://blog-akadra-cometdays9.hatenablog.com/">Go to 「AKADRA's DIARY」</a></Button>
-                    <Button variant="contained" theme={myTheme}><a href="https://zeusuakaneblog.hatenablog.com/">Go to 「AKADRAのなぐりがき」</a></Button>
+                    <Button variant="contained" size="large" theme={myTheme}><a href="https://blog-akadra-cometdays9.hatenablog.com/">Go to 「AKADRA's DIARY」</a></Button>
+                    <Button variant="contained" size="large" theme={myTheme}><a href="https://zeusuakaneblog.hatenablog.com/">Go to 「AKADRAのなぐりがき」</a></Button>
                 </div>
+            </div>
+
+            <div class="area" >
+                <ul class="circles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                </ul>
             </div>
         </div>
         );

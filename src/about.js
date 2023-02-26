@@ -2,6 +2,7 @@ import React from 'react';
 import axios from "axios";
 import './box_container.css';
 import './about.css';
+import './background.css';
 //https://script.google.com/macros/s/AKfycbyhxVnXPw5npWXtGUX_Wlun1_iAToA2JlXxm2WPgBbm1_UVsOR5Ilg784qkCQJSnKVL/exec
 
 
