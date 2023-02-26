@@ -7,7 +7,7 @@ class header extends React.Component {   //page1クラスにReact.Componentを�
         return (
             <div class="nav_all">
                 <div class="title">
-                    <Link to={`/`}>AKADRA's Archives</Link>
+                    <Link to={`/`} class="titlebox">AKADRA's Archives</Link>
                 </div>
                 <div class="menu">
                     <Link to={`/about`} class="menubox">about</Link>
