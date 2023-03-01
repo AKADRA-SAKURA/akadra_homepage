@@ -3,6 +3,7 @@ import { Button } from "@mui/material";
 import './box_container.css';
 import './home.css';
 import './background.css';
+import { TwitterTweetEmbed } from 'react-twitter-embed';
 
 import Yt from './youtube';
 
@@ -46,6 +47,7 @@ class home extends React.Component {   //page1クラスにReact.Componentを継�
                 <div class="twitter box">
                     <h2>Twitter</h2>
                     <hr/>
+                    <TwitterTweetEmbed/>
                     <a class="twitter-timeline" data-height="1000" data-theme="dark" href="https://twitter.com/akadra_music?ref_src=twsrc%5Etfw">Tweets by akadra_music</a>
                 </div>
 
@@ -60,8 +62,10 @@ class home extends React.Component {   //page1クラスにReact.Componentを継�
                     <h2>ブログ</h2>
                     <hr/>
                     外部サイト「はてなブログ」にてブログをやっています。<br/>
-                    <Button variant="contained" size="large" theme={myTheme}><a href="https://blog-akadra-cometdays9.hatenablog.com/">Go to 「AKADRA's DIARY」</a></Button>
-                    <Button variant="contained" size="large" theme={myTheme}><a href="https://zeusuakaneblog.hatenablog.com/">Go to 「AKADRAのなぐりがき」</a></Button>
+                    <div class="btn">
+                        <Button variant="contained" size="large" theme={myTheme}><a href="https://blog-akadra-cometdays9.hatenablog.com/">Go to 「AKADRA's DIARY」</a></Button>
+                        <Button variant="contained" size="large" theme={myTheme}><a href="https://zeusuakaneblog.hatenablog.com/">Go to 「AKADRAのなぐりがき」</a></Button>
+                    </div>
                 </div>
             </div>
 

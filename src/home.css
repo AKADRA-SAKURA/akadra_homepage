@@ -32,3 +32,10 @@
     color: inherit;
 }
 
+.btn{
+  display:table;
+
+}
+.btns{
+  display:table-cell;
+}
