@@ -1,9 +1,10 @@
 .box{
     margin: 2%;
-    padding: 5%;
+    padding: 3%;
     border: 2px solid #2D2525;
     background-color: rgba(0,0,0,0.7);
     color: #CFC7C2;
+    border-radius: 10px;
   }
 
   hr {
