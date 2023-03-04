@@ -29,29 +29,35 @@ class about extends React.Component {   //page2クラスにReact.Componentを継
         return (
             <div class="bg">
                 <div class="about_all">
-                    <div class="photo box">
-                    プロフ画像<br/>
-                    from あろす(@Aros0408)<br/>
-                    <a href="https://github.com/AKADRA-SAKURA">Githubアカウント</a>
+                    <div class="hidari">
+                        <div class="photo box">
+                            プロフ画像<br/>
+                            from あろす(@Aros0408)<br/>
+                            <a href="https://github.com/AKADRA-SAKURA">Githubアカウント</a>
+                        </div>
+
                     </div>
-                    <div class="profile box">
-                        <div class="list" >
-                            <div class="websitebox">
-                                <div class="detailbox">
-                                <h2>AKADRA</h2>
-                                <hr/>
-                                <div class="belongs">
-                                    <a>所属</a><br />
-                                </div>
-                                <hr/>
-                                <div class="details">
-                                    <a>趣味：</a><br />
-                                    <a>好きなもの：</a><br />
-                                    <a>言語：</a><br />
-                                    <a>ツール</a><br />
-                                    <a>プラットフォーム：</a><br />
-                                    <a>DTM: </a><br />
-                                </div>
+
+                    <div class="migi">
+                        <div class="profile box">
+                                <div class="list" >
+                                    <div class="websitebox">
+                                        <div class="detailbox">
+                                        <h2>AKADRA</h2>
+                                        <hr/>
+                                        <div class="belongs">
+                                            所属<br />
+                                        </div>
+                                        <hr/>
+                                        <div class="details">
+                                            趣味：<br />
+                                            好きなもの：<br />
+                                            言語：<br />
+                                            ツール<br />
+                                            プラットフォーム：<br />
+                                            DTM: <br />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
