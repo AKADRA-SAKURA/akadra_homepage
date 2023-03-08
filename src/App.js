@@ -12,11 +12,10 @@ import Header from './header';
 
 
 
-class App extends React.Component {
-  render(){
+function App () {
     return(
       <BrowserRouter>
-        <Header></Header>
+        <Header> </Header>
         <Switch>
           <Route exact path="/" component={home} />
           <Route exact path="/about" component={about} />
@@ -25,10 +24,9 @@ class App extends React.Component {
           <Route exact path="/dtm" component={dtm} />
           <Route exact path="/graphic" component={graphic} />
           <Route exact path="/other" component={other} />
-          <canvas id="canvas"></canvas>
+          <canvas id="canvas" />
         </Switch>
       </BrowserRouter>
     );
   };
-}
 export default App;
