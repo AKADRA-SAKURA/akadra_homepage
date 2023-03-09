@@ -1,13 +1,16 @@
-import React, { useEffect }  from 'react';
+import React, { useEffect, useState }  from 'react';
 import axios from "axios";
 import './box_container.css';
 import './about.css';
 import './background.css';
 
 function about() {
+    const [data, setData] = useState([]);
+
     useEffect(() => {
       axios.get('https://script.google.com/macros/s/AKfycbyhxVnXPw5npWXtGUX_Wlun1_iAToA2JlXxm2WPgBbm1_UVsOR5Ilg784qkCQJSnKVL/exec')
         .then(response => {
+          setData(response.data);
           console.log(response.data);
         })
         .catch(error => {
@@ -35,16 +38,16 @@ function about() {
                                         <h2>AKADRA</h2>
                                         <hr/>
                                         <div className="belongs">
-                                            所属<br />
+                                            【所属】{data.map((d) => ( <div>{d.belongs}</div>))}<br />
                                         </div>
                                         <hr/>
                                         <div className="details">
-                                            趣味：<br />
-                                            好きなもの：<br />
-                                            言語：<br />
-                                            ツール<br />
-                                            プラットフォーム：<br />
-                                            DTM: <br />
+                                            【趣味】{data.map((d) => ( <div>{d.hobby}</div>))}<br />
+                                            【好きなもの】{data.map((d) => ( <div>{d.like}</div>))}<br />
+                                            【言語】{data.map((d) => ( <div>{d.language}</div>))}<br />
+                                            【ツール】{data.map((d) => ( <div>{d.cloud}</div>))}<br />
+                                            【プラットフォーム】{data.map((d) => ( <div>{d.platform}</div>))}<br />
+                                            【DTM】 {data.map((d) => ( <div>{d.dtm}</div>))}<br />
                                         </div>
                                     </div>
                                 </div>
@@ -59,58 +62,4 @@ function about() {
   export default about;
 
 
-
-// class about extends React.Component {   //page2クラスにReact.Componentを継承する
-//     render() {   
-//         useEffect(() => {
-//             axios.get('https://script.google.com/macros/s/AKfycbyhxVnXPw5npWXtGUX_Wlun1_iAToA2JlXxm2WPgBbm1_UVsOR5Ilg784qkCQJSnKVL/exec')
-//               .then(response => {
-//                 console.log(response.data);
-//               })
-//               .catch(error => {
-//                 console.log(error);
-//               });
-//           }, []);
-//         return (
-//             <div class="bg">
-//                 <div class="about_all">
-//                     <div class="hidari">
-//                         <div class="photo box">
-//                             プロフ画像<br/>
-//                             from あろす(@Aros0408)<br/>
-//                             <a href="https://github.com/AKADRA-SAKURA">Githubアカウント</a>
-//                         </div>
-
-//                     </div>
-
-//                     <div class="migi">
-//                         <div class="profile box">
-//                                 <div class="list" >
-//                                     <div class="websitebox">
-//                                         <div class="detailbox">
-//                                         <h2>AKADRA</h2>
-//                                         <hr/>
-//                                         <div class="belongs">
-//                                             所属<br />
-//                                         </div>
-//                                         <hr/>
-//                                         <div class="details">
-//                                             趣味：<br />
-//                                             好きなもの：<br />
-//                                             言語：<br />
-//                                             ツール<br />
-//                                             プラットフォーム：<br />
-//                                             DTM: <br />
-//                                         </div>
-//                                     </div>
-//                                 </div>
-//                             </div>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </div>
-//         );
-//     }
-// }
-
-// export default about;                   //page2を出力する為に必要
+//   {data.length > 0 && data[0].hobby}
