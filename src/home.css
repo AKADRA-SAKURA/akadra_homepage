@@ -2,24 +2,62 @@
     font-weight: normal;
   }
   .hitokoto{
+    padding: 1%;
     text-align: center;
     color: rgb(0,0,0);
   }
   .hello{
     width: 80%;
     margin:  0 auto;
-    color: black;
+    color: #000000;
   }
+
+  .toptopics{
+    display:table;
+    width: 100%;
+  }
+
+  .hidari{
+    display:table-cell;
+    width: 70%;
+  }
+  .migi{
+    display:table-cell;
+    width: 30%;
+  }
+
+
   .whatsnew{
     text-align: left;
     color: #CFC7C2;
-  
+    width: 90%;
   }
   .twitter{
-  
+    width: 90%;
   }
 
+  .youtube{
+    width: 90%;
+  }
+  
   .blog{
     text-align: left;
     color: #CFC7C2;
   }
+
+  a {
+    text-decoration: none;
+  }
+  a,a:hover,a:visited{
+    color: inherit;
+}
+
+.btn{
+  display:table;
+
+}
+.btns{
+  display:table-cell;
+}
+
+
