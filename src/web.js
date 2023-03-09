@@ -1,9 +1,21 @@
 import React, { useEffect, useState }  from 'react';
+import Button from '@mui/material/Button';
 import axios from "axios";
-import { Link } from 'react-router-dom';
 import './background.css';
 import './box_container.css';
+import { createTheme } from '@mui/material/styles';
 import './web.css';
+
+const myTheme = createTheme({
+    palette: {
+      primary: {
+        main: "#e0e0e0",
+      },
+      secondary: {
+        main: "#424242",
+      },
+    },
+  });
 
 function web () {
     const [data, setData] = useState([]);
@@ -20,9 +32,25 @@ function web () {
     }, []);
 
         return (
-            <div>
-                web!!!
-                <br/>
+            <div className="bg">
+                <div className="web_all">
+                    {data.map((d) => (
+                        <div className="box">
+                            <h1>{d.no}：{d.title}</h1>
+                            <div className='hidari'>
+                                <Button variant="contained" size="large" theme={myTheme}><a href={d.url}>URL</a></Button>
+                            </div>
+                            <div className='migi'>
+                                <h3>{d.summary}</h3><br /> 
+                                使用言語：{d.language}<br />
+                                チーム人数：{d.people}<br /> 
+                                役割：{d.role}<br /> 
+                                説明：{d.detail}<br /> 
+                                <Button variant="contained" size="large" theme={myTheme}><a href={d.githuburl}>Github URL</a></Button>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
         );
     }
