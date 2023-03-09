@@ -4,7 +4,7 @@ module.exports = {
     rules: {
       'react/jsx-filename-extension': 'off',
       'react/jsx-one-expression-per-line': 'off',
-      'no-console': 'warn',
+      'no-console': "off",
       'no-unused-vars': 'warn',
     },
     parserOptions: {

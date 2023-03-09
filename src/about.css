@@ -1,13 +1,16 @@
 .about_all{
   width: 80%;
   margin:  0 auto;
+  display:table;
 }
 
 .hidari{
+  display:table-cell;
   width: 30%;
 }
 
 .migi{
+  display:table-cell;
   width: 70%;
 }
 
