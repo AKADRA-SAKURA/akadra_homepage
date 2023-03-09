@@ -3,6 +3,7 @@ import axios from "axios";
 import './box_container.css';
 import './about.css';
 import './background.css';
+import akadra1 from './images/akadra1.jpg'; 
 
 function about() {
     const [data, setData] = useState([]);
@@ -11,7 +12,6 @@ function about() {
       axios.get('https://script.google.com/macros/s/AKfycbyhxVnXPw5npWXtGUX_Wlun1_iAToA2JlXxm2WPgBbm1_UVsOR5Ilg784qkCQJSnKVL/exec')
         .then(response => {
           setData(response.data);
-          console.log(response.data);
         })
         .catch(error => {
           console.log(error);
@@ -23,7 +23,7 @@ function about() {
                 <div className="about_all">
                     <div className="hidari">
                         <div className="photo box">
-                            プロフ画像<br/>
+                            <img className="profile-picture" src={akadra1} alt="akadra" />
                             from あろす(@Aros0408)<br/>
                             <a href="https://github.com/AKADRA-SAKURA">Githubアカウント</a>
                         </div>
