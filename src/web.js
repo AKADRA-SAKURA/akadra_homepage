@@ -36,12 +36,12 @@ function web () {
                 <div className="web_all">
                     {data.map((d) => (
                         <div className="box">
-                            <h1>{d.no}：{d.title}</h1>
+                            <h1>{d.no}：「{d.title}」</h1><hr/>
                             <div className='hidari'>
                                 <Button variant="contained" size="large" theme={myTheme}><a href={d.url}>URL</a></Button>
                             </div>
                             <div className='migi'>
-                                <h3>{d.summary}</h3><br /> 
+                                <h3>{d.summary}</h3>
                                 使用言語：{d.language}<br />
                                 チーム人数：{d.people}<br /> 
                                 役割：{d.role}<br /> 
