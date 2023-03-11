@@ -24,7 +24,7 @@ function dtm () {
                 <div className="dtm_all">
                     {data.map((d) => (
                         <div className="box">
-                            <h1>{d.no}：「{d.title}」</h1><hr/>
+                            <h1>{d.no}「{d.title}」</h1><hr/>
                                 リリース日：{d.date}<br />
                                 サークル名：{d.circle}<br /> 
                                 アルバム名：{d.album}<br /> 
