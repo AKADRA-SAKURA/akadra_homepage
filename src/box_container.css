@@ -18,3 +18,6 @@
   background-color: rgba(45,37,37, 0.5);
   height: 100%;
 }
+button{
+  z-index: 0;
+}
