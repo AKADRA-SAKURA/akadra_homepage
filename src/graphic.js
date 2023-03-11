@@ -1,13 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './background.css';
+import './box_container.css';
+import './graphic.css';
 
 function graphic () {
         return (
-            <div>
-                graphic!!!
-                <br/>
-                <Link to="/">Go To home</Link>
+            <div className="bg">
+                <div className="graphic_all">
+                    工事中
+                </div>
             </div>
         );
     }
