@@ -8,7 +8,7 @@ import dtm from './dtm';
 import graphic from './graphic';
 import other from './other';
 import Header from './header';
-
+import Footer from './footer';
 
 
 
@@ -26,6 +26,7 @@ function App () {
           <Route exact path="/other" component={other} />
           <canvas id="canvas" />
         </Switch>
+        <Footer> </Footer>
       </BrowserRouter>
     );
   };
