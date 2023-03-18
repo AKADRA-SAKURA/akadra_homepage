@@ -13,19 +13,18 @@
   }
 
   .toptopics{
-    display:table;
+    display: flex;
     width: 100%;
   }
 
   .hidari{
-    display:table-cell;
     width: 70%;
+    overflow: hidden;
   }
   .migi{
-    display:table-cell;
     width: 30%;
+    overflow: hidden;
   }
-
 
   .whatsnew{
     text-align: left;
@@ -33,7 +32,7 @@
     width: 90%;
   }
   .twitter{
-    width: 90%;
+    width: 80%;
   }
 
   .youtube{
@@ -43,6 +42,7 @@
   .blog{
     text-align: left;
     color: #CFC7C2;
+    width: 80%;
   }
 
   a {

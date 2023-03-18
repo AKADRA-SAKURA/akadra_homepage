@@ -34,7 +34,7 @@ function about() {
     return (
             <div className="bg">
                 <div className="about_all">
-                    <div className="hidari">
+                    <div className="hidari_about">
                         <div className="photo box">
                             <img className="profile-picture" src={akadra1} alt="akadra" />
                             from あろす(<a href="https://twitter.com/Aros0408">@Aros0408</a>)<br/>
@@ -43,7 +43,7 @@ function about() {
 
                     </div>
 
-                    <div className="migi">
+                    <div className="migi_about">
                         <div className="profile box">
                             <div className="list">
                                 <div className="websitebox">

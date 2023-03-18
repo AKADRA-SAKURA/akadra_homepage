@@ -4,12 +4,12 @@
   display:table;
 }
 
-.hidari{
+.hidari_about{
   display:table-cell;
   width: 30%;
 }
 
-.migi{
+.migi_about{
   display:table-cell;
   width: 70%;
 }

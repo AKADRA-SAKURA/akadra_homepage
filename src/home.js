@@ -67,10 +67,10 @@ function home () {
                             <div className="btn">
                                 <Button variant="contained" size="large" theme={myTheme}><a href="https://blog-akadra-cometdays9.hatenablog.com/">Go to 「AKADRA&apos;s DIARY」</a></Button>
                                 <Button variant="contained" size="large" theme={myTheme}><a href="https://zeusuakaneblog.hatenablog.com/">Go to 「AKADRAのなぐりがき」</a></Button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
 
 
