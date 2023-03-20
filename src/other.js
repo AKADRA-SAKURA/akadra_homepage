@@ -24,6 +24,9 @@ function other () {
 
         return (
             <div className="bg">
+                <div className="hitokoto">
+                    <h2>その他</h2>
+                </div>
                 <div className="other_all">
                     {dataother.map((d) => (
                         <div className="box">

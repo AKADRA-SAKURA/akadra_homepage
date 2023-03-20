@@ -21,6 +21,9 @@ function dtm () {
 
         return (
             <div className="bg">
+                <div className="hitokoto">
+                    <h2>Discography</h2>
+                </div>
                 <div className="dtm_all">
                     {data.map((d) => (
                         <div className="box">

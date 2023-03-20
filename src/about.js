@@ -33,6 +33,9 @@ function about() {
   
     return (
             <div className="bg">
+                <div className="hitokoto">
+                    <h2>プロフィール</h2>
+                </div>
                 <div className="about_all">
                     <div className="hidari_about">
                         <div className="photo box">

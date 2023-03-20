@@ -6,6 +6,9 @@ import './graphic.css';
 function graphic () {
         return (
             <div className="bg">
+                <div className="hitokoto">
+                    <h2>お絵かき</h2>
+                </div>
                 <div className="graphic_all">
                     工事中
                 </div>

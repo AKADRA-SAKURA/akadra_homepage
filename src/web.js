@@ -33,6 +33,9 @@ function web () {
 
         return (
             <div className="bg">
+                <div className="hitokoto">
+                    <h2>Webサイト制作物</h2>
+                </div>
                 <div className="web_all">
                     {data.map((d) => (
                         <div className="box">

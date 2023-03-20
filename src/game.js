@@ -35,6 +35,9 @@ function game () {
 
         return (
             <div className="bg">
+                <div className="hitokoto">
+                    <h2>ゲーム制作物</h2>
+                </div>
                 <div className="game_all">
                     {data.map((d) => (
                         <div className="box">
