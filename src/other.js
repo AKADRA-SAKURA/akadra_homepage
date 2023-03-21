@@ -1,4 +1,5 @@
 import React, { useEffect, useState }  from 'react';
+import { motion } from 'framer-motion';
 import axios from "axios";
 
 import './background.css';
@@ -23,6 +24,13 @@ function other () {
     }, []);
 
         return (
+            <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 3
+             }}
+          >
             <div className="bg">
                 <div className="hitokoto">
                     <h2>その他</h2>
@@ -56,6 +64,7 @@ function other () {
                     </div>
                 </div>
             </div>
+            </motion.div>
         );
 }
 export default other;
