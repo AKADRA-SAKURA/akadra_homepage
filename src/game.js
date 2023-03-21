@@ -36,11 +36,21 @@ function game () {
 
         return (
           <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 3
-           }}
+          animate={{
+            x: 0,
+            opacity: 1
+          }}
+          initial={{
+            x: 100,
+            opacity: 0
+          }}
+          exit={{
+            x: -100,
+            opacity: 0
+          }}
+          transition={{
+            duration: 2
+          }}
         >
             <div className="bg">
                 <div className="hitokoto">
