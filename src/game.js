@@ -63,7 +63,7 @@ function game () {
                             <div className='hidari'>
                                 <Button variant="contained" size="large" theme={myTheme}><a href={d.url}>URL</a></Button>
                             </div>
-                            <div className='migi'>
+                            <div className=''>
                                 リリース年：{d.year}<br />
                                 チーム名：{d.team}<br />
                                 チーム人数：{d.people}<br />
@@ -71,7 +71,13 @@ function game () {
                                 リリース場所：{d.release}<br />
                                 役割：{d.role}<br /> 
                                 説明：{d.detail}<br /> 
-                                <Button variant="contained" size="large" theme={myTheme}><a href={d.githuburl}>Github URL</a></Button>
+                                {(() => {
+                                  if (d.githuburl) {
+                                    return <Button variant="contained" size="large" theme={myTheme}><a href={d.githuburl}>Github URL</a></Button>;
+                                  } else {
+                                    return null;
+                                  }
+                                })()}
                             </div>
                         </div>
                     ))}

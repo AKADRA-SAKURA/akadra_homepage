@@ -5,7 +5,8 @@ import axios from "axios";
 import './background.css';
 import './box_container.css';
 import './other.css';
-import Yt from './youtube';
+import YouTube from 'react-youtube';
+import './youtube.css';
 
 
 
@@ -50,11 +51,8 @@ function other () {
                         <div className="box">
                             <div className='Movie'>
                                 <h1>{d.no}「{d.title}」</h1><hr/>
-                                <div className='hidari'>
-                                    <a href={d.url}> 
-                                    <Yt /></a>
-                                </div>
-                                <div className='migi'>
+                                    <YouTube videoId={d.url} />
+                                <div className=''>
                                     リリース年：{d.release}<br />
                                     チーム人数：{d.people}<br />
                                     役割：{d.role}<br /> 

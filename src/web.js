@@ -21,6 +21,7 @@ const myTheme = createTheme({
 function web () {
     const [data, setData] = useState([]);
 
+
     useEffect(() => {
       axios.get('https://script.google.com/macros/s/AKfycby3qqVTyFrLBo5bVsUxCkm-rOH-mWhSkLTXEjy3PBdUGmRRZU1Dv7_qFwP76zjfuaIgdA/exec')
         .then(response => {
@@ -61,13 +62,19 @@ function web () {
                             <div className='hidari'>
                                 <Button variant="contained" size="large" theme={myTheme}><a href={d.url}>URL</a></Button>
                             </div>
-                            <div className='migi'>
+                            <div className=''>
                                 <h3>{d.summary}</h3>
                                 使用言語：{d.language}<br />
                                 チーム人数：{d.people}<br /> 
                                 役割：{d.role}<br /> 
                                 説明：{d.detail}<br /> 
-                                <Button variant="contained" size="large" theme={myTheme}><a href={d.githuburl}>Github URL</a></Button>
+                                {(() => {
+                                  if (d.githuburl) {
+                                    return <Button variant="contained" size="large" theme={myTheme}><a href={d.githuburl}>Github URL</a></Button>;
+                                  } else {
+                                    return null;
+                                  }
+                                })()}
                             </div>
                         </div>
                     ))}
