@@ -1,16 +1,16 @@
 .about_all{
   width: 80%;
   margin:  0 auto;
-  display:table;
+  display: flex;
 }
 
-.hidari{
-  display:table-cell;
+.hidari_about{
+  overflow: hidden;
   width: 30%;
 }
 
-.migi{
-  display:table-cell;
+.migi_about{
+  overflow: hidden;
   width: 70%;
 }
 

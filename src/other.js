@@ -1,10 +1,12 @@
 import React, { useEffect, useState }  from 'react';
+import { motion } from 'framer-motion';
 import axios from "axios";
 
 import './background.css';
 import './box_container.css';
 import './other.css';
-import Yt from './youtube';
+import YouTube from 'react-youtube';
+import './youtube.css';
 
 
 
@@ -23,17 +25,34 @@ function other () {
     }, []);
 
         return (
+            <motion.div
+            animate={{
+                x: 0,
+                opacity: 1
+              }}
+              initial={{
+                x: 100,
+                opacity: 0
+              }}
+              exit={{
+                x: -100,
+                opacity: 0
+              }}
+              transition={{
+                duration: 2
+              }}
+          >
             <div className="bg">
+                <div className="hitokoto">
+                    <h2>その他</h2>
+                </div>
                 <div className="other_all">
                     {dataother.map((d) => (
                         <div className="box">
                             <div className='Movie'>
                                 <h1>{d.no}「{d.title}」</h1><hr/>
-                                <div className='hidari'>
-                                    <a href={d.url}> 
-                                    <Yt /></a>
-                                </div>
-                                <div className='migi'>
+                                    <YouTube videoId={d.url} />
+                                <div className=''>
                                     リリース年：{d.release}<br />
                                     チーム人数：{d.people}<br />
                                     役割：{d.role}<br /> 
@@ -53,6 +72,7 @@ function other () {
                     </div>
                 </div>
             </div>
+            </motion.div>
         );
 }
 export default other;

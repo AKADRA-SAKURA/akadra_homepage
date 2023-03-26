@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import Button from '@mui/material/Button';
 import './box_container.css';
 import './home.css';
@@ -22,6 +23,13 @@ const myTheme = createTheme({
 
 function home () {
         return (
+            <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 2
+             }}
+          >
         <div className="bg">
             <div className="hello">
                 <div className="hitokoto">
@@ -34,7 +42,7 @@ function home () {
                         <div className="whatsnew box">
                             <h2>WHAT&apos;S NEW</h2>
                             <hr/>
-                            2023.01 HPリニューアル<br/>
+                            2023.04 HPリニューアル<br/>
                             2022.12.28 other ダンス歴追加<br/>
                             2022.10.09 other ダンス歴追加<br/>
                             2022.9.10 Youtube欄追加<br/>
@@ -65,12 +73,12 @@ function home () {
                             <hr/>
                             外部サイト「はてなブログ」にてブログをやっています。<br/>
                             <div className="btn">
-                                <Button variant="contained" size="large" theme={myTheme}><a href="https://blog-akadra-cometdays9.hatenablog.com/">Go to 「AKADRA&apos;s DIARY」</a></Button>
-                                <Button variant="contained" size="large" theme={myTheme}><a href="https://zeusuakaneblog.hatenablog.com/">Go to 「AKADRAのなぐりがき」</a></Button>
+                                <Button variant="contained" size="large" theme={myTheme}><a href="https://blog-akadra-cometdays9.hatenablog.com/">AKADRA&apos;s DIARY</a></Button>
+                                <Button variant="contained" size="large" theme={myTheme}><a href="https://zeusuakaneblog.hatenablog.com/">AKADRAのなぐりがき</a></Button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
 
 
@@ -91,6 +99,7 @@ function home () {
                 </ul>
             </div>
         </div>
+        </motion.div>
         );
     }
 export default home;  

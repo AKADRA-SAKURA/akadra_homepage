@@ -1,6 +1,5 @@
 module.exports = {
-    extends: ['airbnb', 'prettier'],
-    plugins: ['react', 'jsx-a11y', 'import'],
+  plugins: ['react', 'jsx-a11y', 'import'],
     rules: {
       'react/jsx-filename-extension': 'off',
       'react/jsx-one-expression-per-line': 'off',

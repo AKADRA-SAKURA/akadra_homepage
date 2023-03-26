@@ -1,4 +1,5 @@
 import React, { useEffect, useState }  from 'react';
+import { motion } from 'framer-motion';
 import axios from "axios";
 import './background.css';
 import './box_container.css';
@@ -20,7 +21,27 @@ function dtm () {
     }, []);
 
         return (
+            <motion.div
+            animate={{
+                x: 0,
+                opacity: 1
+              }}
+              initial={{
+                x: 100,
+                opacity: 0
+              }}
+              exit={{
+                x: -100,
+                opacity: 0
+              }}
+              transition={{
+                duration: 2
+              }}
+          >
             <div className="bg">
+                <div className="hitokoto">
+                    <h2>Discography</h2>
+                </div>
                 <div className="dtm_all">
                     {data.map((d) => (
                         <div className="box">
@@ -32,6 +53,7 @@ function dtm () {
                     ))}
                 </div>
             </div>
+            </motion.div>
         );
 }
 

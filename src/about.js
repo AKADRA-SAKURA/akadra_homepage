@@ -1,4 +1,5 @@
 import React, { useEffect, useState }  from 'react';
+import { motion } from 'framer-motion';
 import Button from '@mui/material/Button';
 import axios from "axios";
 import './box_container.css';
@@ -32,9 +33,29 @@ function about() {
     }, []);
   
     return (
+      <motion.div
+      animate={{
+        x: 0,
+        opacity: 1
+      }}
+      initial={{
+        x: 100,
+        opacity: 0
+      }}
+      exit={{
+        x: -100,
+        opacity: 0
+      }}
+      transition={{
+        duration: 2
+      }}
+    >
             <div className="bg">
+                <div className="hitokoto">
+                    <h2>プロフィール</h2>
+                </div>
                 <div className="about_all">
-                    <div className="hidari">
+                    <div className="hidari_about">
                         <div className="photo box">
                             <img className="profile-picture" src={akadra1} alt="akadra" />
                             from あろす(<a href="https://twitter.com/Aros0408">@Aros0408</a>)<br/>
@@ -43,7 +64,7 @@ function about() {
 
                     </div>
 
-                    <div className="migi">
+                    <div className="migi_about">
                         <div className="profile box">
                             <div className="list">
                                 <div className="websitebox">
@@ -69,6 +90,7 @@ function about() {
                     </div>
                 </div>
             </div>
+            </motion.div>
     );
   }
   
