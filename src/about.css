@@ -1,0 +1,19 @@
+.about_all{
+  width: 80%;
+  margin:  0 auto;
+  display: flex;
+}
+
+.hidari_about{
+  overflow: hidden;
+  width: 30%;
+}
+
+.migi_about{
+  overflow: hidden;
+  width: 70%;
+}
+
+.profile-picture{
+  width: 100%;
+}

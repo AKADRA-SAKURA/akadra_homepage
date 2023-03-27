@@ -1,0 +1,63 @@
+  h1, h2 {
+    font-weight: normal;
+  }
+  .hitokoto{
+    padding: 1%;
+    text-align: center;
+    color: rgb(0,0,0);
+  }
+  .hello{
+    width: 80%;
+    margin:  0 auto;
+    color: #000000;
+  }
+
+  .toptopics{
+    display: flex;
+    width: 100%;
+  }
+
+  .hidari{
+    width: 70%;
+    overflow: hidden;
+  }
+  .migi{
+    width: 30%;
+    overflow: hidden;
+  }
+
+  .whatsnew{
+    text-align: left;
+    color: #CFC7C2;
+    width: 90%;
+  }
+  .twitter{
+    width: 80%;
+  }
+
+  .youtube{
+    width: 90%;
+  }
+  
+  .blog{
+    text-align: left;
+    color: #CFC7C2;
+    width: 80%;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  a,a:hover,a:visited{
+    color: inherit;
+}
+
+.btn{
+  display:table;
+
+}
+.btns{
+  display:table-cell;
+}
+
+
