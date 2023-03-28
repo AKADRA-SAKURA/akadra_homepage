@@ -13,3 +13,8 @@ phases:
   post_build:
     commands:
       - echo 'Hello World (POST_BUILD phase)'
+artifacts:
+  files:
+    - '**/*'
+  base-directory: $CODEBUILD_SRC_DIR
+  descard-paths: no
