@@ -23,6 +23,7 @@ function web () {
 
 
     useEffect(() => {
+      document.title =`WEB SITE | AKADRA Archives`;
       axios.get('https://script.google.com/macros/s/AKfycby3qqVTyFrLBo5bVsUxCkm-rOH-mWhSkLTXEjy3PBdUGmRRZU1Dv7_qFwP76zjfuaIgdA/exec')
         .then(response => {
           setData(response.data);

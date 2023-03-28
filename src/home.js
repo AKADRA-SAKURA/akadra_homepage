@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { motion } from 'framer-motion';
 import Button from '@mui/material/Button';
 import './box_container.css';
@@ -22,6 +22,10 @@ const myTheme = createTheme({
 });
 
 function home () {
+    useEffect(() => {
+        document.title =`AKADRA Archives`
+      })
+      
         return (
             <motion.div
             initial={{ opacity: 0 }}
@@ -42,7 +46,7 @@ function home () {
                         <div className="whatsnew box">
                             <h2>WHAT&apos;S NEW</h2>
                             <hr/>
-                            2023.04 HPリニューアル<br/>
+                            2023.04.01 HPリニューアル<br/>
                             2022.12.28 other ダンス歴追加<br/>
                             2022.10.09 other ダンス歴追加<br/>
                             2022.9.10 Youtube欄追加<br/>

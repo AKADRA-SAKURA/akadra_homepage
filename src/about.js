@@ -23,6 +23,7 @@ function about() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
+      document.title =`about | AKADRA Archives`;
       axios.get('https://script.google.com/macros/s/AKfycbyhxVnXPw5npWXtGUX_Wlun1_iAToA2JlXxm2WPgBbm1_UVsOR5Ilg784qkCQJSnKVL/exec')
         .then(response => {
           setData(response.data);

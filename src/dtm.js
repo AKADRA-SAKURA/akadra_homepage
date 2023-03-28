@@ -10,6 +10,7 @@ function dtm () {
     const [data, setData] = useState([]);
 
     useEffect(() => {
+      document.title =`DTM | AKADRA Archives`;
       axios.get('https://script.google.com/macros/s/AKfycbxklHYaKjDs5xo2Yt4wRhf2XW7HD4CbfHH8hL8Pu0brYa-fb2U7QebdrBv-zzqTQ24vGg/exec')
         .then(response => {
           setData(response.data);

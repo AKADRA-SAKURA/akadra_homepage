@@ -24,6 +24,7 @@ function game () {
     const [data, setData] = useState([]);
 
     useEffect(() => {
+      document.title =`GAME | AKADRA Archives`;
       axios.get('https://script.google.com/macros/s/AKfycbw4wNqKQHxyXDcgGs3C-XGUpjh2ht6p9qs-ziu0slavWtsJ3kpfO9bdMziLPSmWKOilqw/exec')
         .then(response => {
           setData(response.data);

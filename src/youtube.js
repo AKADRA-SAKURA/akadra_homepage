@@ -4,7 +4,7 @@ import './youtube.css';
 
 function youtube () {
       return(
-        <YouTube videoId="https://www.youtube.com/watch?v=D45Fpt8-k44&t=1s&ab_channel=AKADRA" />
+        <YouTube videoId="D45Fpt8-k44" />
       )
     }
 
