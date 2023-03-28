@@ -4,17 +4,16 @@ phases:
   install:
     commands:
       - echo 'Hello World (INSTALL phase)'
-  pre_build:
-    commands:
-      - echo 'Hello World (PRE_BUILD phase)'
-  build:
-    commands:
-      - echo 'Hello World (BUILD phase)'
-  post_build:
-    commands:
-      - echo 'Hello World (POST_BUILD phase)'
+    pre_build:
+      commands:
+        - npm ci
+    build:
+      commands:
+        - npm run build
 artifacts:
+  base-directory: build
   files:
     - '**/*'
-  base-directory: $CODEBUILD_SRC_DIR
-  descard-paths: no
+cache:
+  paths:
+    - node_modules/**/*
