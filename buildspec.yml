@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo 'Hello World (INSTALL phase)'
+      - npm install
     pre_build:
       commands:
         - npm ci
