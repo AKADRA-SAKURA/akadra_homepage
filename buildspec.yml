@@ -4,12 +4,12 @@ phases:
   install:
     commands:
       - npm install
-    pre_build:
-      commands:
-        - npm ci
-    build:
-      commands:
-        - npm run build
+  pre_build:
+    commands:
+      - npm ci
+  build:
+    commands:
+      - npm run build
 artifacts:
   base-directory: build
   files:
