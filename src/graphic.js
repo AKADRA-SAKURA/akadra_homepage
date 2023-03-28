@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { motion } from 'framer-motion';
 import './background.css';
 import './box_container.css';
 import './graphic.css';
 
 function graphic () {
+        useEffect(() => {
+          document.title =`Graphics | AKADRA Archives`
+        })
         return (
             <motion.div
             animate={{

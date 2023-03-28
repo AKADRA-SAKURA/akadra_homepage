@@ -15,6 +15,7 @@ function other () {
     const [datadance, setData2] = useState([]);
 
     useEffect(() => {
+    document.title =`other | AKADRA Archives`;
     const fetchData = async () => {
         const result1 = await axios.get("https://script.google.com/macros/s/AKfycbw2sFQTNZbr2Gy0H9GQbAcEFRuJRmWdZHnTixKvS_qpJuaQ8gkqemuv1u9XeRMtHYA7fw/exec");
         const result2 = await axios.get("https://script.google.com/macros/s/AKfycbwymn9dgm05cVF_irFpYjtyvj5qkCeTaor3zbCV21VCOLJrlqeIhHIseGzQp9I9-w/exec");
