@@ -9,6 +9,7 @@ import { createTheme } from '@mui/material/styles';
 import './game.css';
 
 
+
 const myTheme = createTheme({
     palette: {
       primary: {
@@ -63,6 +64,15 @@ function game () {
                             <h1>{d.no}「{d.title}」</h1><hr/>
                             <div className='hidari'>
                                 <Button variant="contained" size="large" theme={myTheme}><a href={d.url}>URL</a></Button>
+                                {(() => {
+                                  if (d.photo) {
+                                    return <div className="photo box">
+                                      <img className="profile-picture" src={`./images/${d.photo}`} alt={d.title} />
+                                    </div>
+                                  } else {
+                                    return null;
+                                  }
+                                })()}
                             </div>
                             <div className=''>
                                 リリース年：{d.year}<br />
