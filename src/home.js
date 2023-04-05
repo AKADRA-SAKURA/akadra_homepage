@@ -83,24 +83,6 @@ function home () {
                         </div>
                     </div>
                 </div>
-
-
-
-            </div>
-
-            <div className="area" >
-                <ul className="circles">
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                        <li> </li>
-                </ul>
             </div>
         </div>
         </motion.div>

@@ -14,10 +14,18 @@
 }
 .bg{
   margin: 0;
-  padding: 5% 0 0 0;
-  background-color: rgba(45,37,37, 0.5);
-  height: 100%;
+  padding: 10% 0 0 0;
+  height: 200%;
+  width: 100vw;
+  z-index: 0;
 }
 button{
   z-index: 0;
+}
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  .bg{
+    margin: 0 0 8% 0;
+  }
 }
