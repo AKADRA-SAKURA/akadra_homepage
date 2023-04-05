@@ -17,3 +17,22 @@
 .profile-picture{
   width: 100%;
 }
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  .about_all{
+    width: 80%;
+    margin:  0 auto;
+    display: contents;
+  }
+  
+  .hidari_about{
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .migi_about{
+    overflow: hidden;
+    width: 100%;
+  }
+}
