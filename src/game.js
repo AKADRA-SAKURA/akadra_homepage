@@ -7,6 +7,8 @@ import './background.css';
 import './box_container.css';
 import { createTheme } from '@mui/material/styles';
 import './game.css';
+import './images/crossdx.jpg'; 
+
 
 
 const myTheme = createTheme({
@@ -63,6 +65,15 @@ function game () {
                             <h1>{d.no}「{d.title}」</h1><hr/>
                             <div className='hidari'>
                                 <Button variant="contained" size="large" theme={myTheme}><a href={d.url}>URL</a></Button>
+                                {d.photo && ( // if文をシンプルに書き換えました
+                                  <div className="photo box">
+                                    <img
+                                      className="profile-picture"
+                                      src={`./images/${d.photo}`}
+                                      alt={d.title}
+                                    />
+                                  </div>
+                                )}
                             </div>
                             <div className=''>
                                 リリース年：{d.year}<br />
@@ -72,13 +83,11 @@ function game () {
                                 リリース場所：{d.release}<br />
                                 役割：{d.role}<br /> 
                                 説明：{d.detail}<br /> 
-                                {(() => {
-                                  if (d.githuburl) {
-                                    return <Button variant="contained" size="large" theme={myTheme}><a href={d.githuburl}>Github URL</a></Button>;
-                                  } else {
-                                    return null;
-                                  }
-                                })()}
+                                {d.githuburl && ( // if文をシンプルに書き換えました
+                                  <Button variant="contained" size="large" theme={myTheme}>
+                                    <a href={d.githuburl}>Github URL</a>
+                                  </Button>
+                                )}
                             </div>
                         </div>
                     ))}

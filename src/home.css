@@ -34,10 +34,6 @@
   .twitter{
     width: 80%;
   }
-
-  .youtube{
-    width: 90%;
-  }
   
   .blog{
     text-align: left;
@@ -61,3 +57,29 @@
 }
 
 
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  .toptopics{
+    display:contents;
+    width: 100%;
+  }
+
+  .hidari{
+    width: 100%;
+    overflow: hidden;
+  }
+  .migi{
+    width: 90%;
+    overflow:visible;
+  }
+  
+  .twitter{
+    width: 100%;
+  }
+  
+  .blog{
+    text-align: left;
+    color: #CFC7C2;
+    width: 100%;
+  }
+}
