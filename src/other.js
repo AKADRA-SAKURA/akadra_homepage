@@ -13,14 +13,17 @@ import './youtube.css';
 function other () {
     const [dataother, setData1] = useState([]);
     const [datadance, setData2] = useState([]);
+    const [datamagic, setDatamagic] = useState([]);
 
     useEffect(() => {
     document.title =`other | AKADRA Archives`;
     const fetchData = async () => {
         const result1 = await axios.get("https://script.google.com/macros/s/AKfycbw2sFQTNZbr2Gy0H9GQbAcEFRuJRmWdZHnTixKvS_qpJuaQ8gkqemuv1u9XeRMtHYA7fw/exec");
         const result2 = await axios.get("https://script.google.com/macros/s/AKfycbwymn9dgm05cVF_irFpYjtyvj5qkCeTaor3zbCV21VCOLJrlqeIhHIseGzQp9I9-w/exec");
+        const resultmagic = await axios.get("https://script.google.com/macros/s/AKfycbxYKNA-llyb8SWtuwHk919o5bxB9WGW9hZBcbhnY7teDhNrgAvFgtSyBWvaIpf3WX8L/exec");
         setData1(result1.data);
         setData2(result2.data);
+        setDatamagic(resultmagic.data);
     };
     fetchData();
     }, []);
@@ -62,6 +65,15 @@ function other () {
                             </div>
                         </div>
                     ))}
+                </div>
+
+                <div className="other_all">
+                    <div className="box">
+                        <h2>ステージ＆サロンマジック演目</h2><hr/>
+                        {datamagic.map((d) => (
+                            <>{d.no}：{d.categories}（ {d.event} ）&#40;{d.year}&#41;<br/></>
+                        ))}
+                    </div>
                 </div>
 
                 <div className="other_all">
