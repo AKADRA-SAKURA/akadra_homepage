@@ -3,3 +3,37 @@
     margin:  0 auto;
     display:table;
   }
+
+  .photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .photo-item {
+    position: relative;
+    flex: 0 0 calc(25% - 10px); /* 4つの写真を1行に表示 */
+  }
+  
+  .photo-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .title-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .photo-item:hover .title-overlay {
+    opacity: 1;
+  }

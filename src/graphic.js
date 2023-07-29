@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import './background.css';
 import './box_container.css';
 import './graphic.css';
+import photosData from "./photosData";
+ 
 
 function graphic () {
         useEffect(() => {
@@ -31,7 +33,14 @@ function graphic () {
                     <h2>お絵かき</h2>
                 </div>
                 <div className="graphic_all">
-                    工事中
+                  <div className="photo-grid">
+                    {photosData.map((photo) => (
+                      <div key={photo.id} className="photo-item">
+                        <img src={photo.src} alt={photo.alt} />
+                        <div className="title-overlay">{photo.title}</div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
             </div>
             </motion.div>
