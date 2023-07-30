@@ -14,7 +14,7 @@
 }
 .bg{
   margin: 0;
-  padding: 10% 0 0 0;
+  padding: 3% 0 0 0;
   height: 200%;
   width: 100vw;
   z-index: 0;
@@ -27,5 +27,6 @@ button{
 	/* 480px以下に適用されるCSS（スマホ用） */
   .bg{
     margin: 0 0 8% 0;
+    padding: 10% 0 0 0;
   }
 }

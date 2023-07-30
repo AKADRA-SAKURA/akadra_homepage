@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import axios from "axios";
 import './box_container.css';
 import './about.css';
-import './background.css';
+
 import { createTheme } from '@mui/material/styles';
 import akadra1 from './images/akadra1.jpg'; 
 

@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import { motion } from 'framer-motion';
-import './background.css';
+
 import './box_container.css';
 import './graphic.css';
 import photosData from "./photosData";
