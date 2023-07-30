@@ -1,7 +1,7 @@
 import React, { useEffect, useState }  from 'react';
 import { motion } from 'framer-motion';
 import axios from "axios";
-import './background.css';
+
 import './box_container.css';
 import './dtm.css';
 

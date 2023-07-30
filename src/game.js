@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Button from '@mui/material/Button';
 import axios from "axios";
 
-import './background.css';
+
 import './box_container.css';
 import { createTheme } from '@mui/material/styles';
 import './game.css';
