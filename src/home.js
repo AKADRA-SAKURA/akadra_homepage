@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Button from '@mui/material/Button';
 import './box_container.css';
 import './home.css';
-import './background.css';
+
 import { TwitterTweetEmbed } from 'react-twitter-embed';
 import { createTheme } from '@mui/material/styles';
 import Yt from './youtube';
@@ -46,14 +46,13 @@ function home () {
                         <div className="whatsnew box">
                             <h2>WHAT&apos;S NEW</h2>
                             <hr/>
+                            2023.07.30 ハンバーガーメニュー修正<br/>
                             2023.04.01 HPリニューアル<br/>
                             2022.12.28 other ダンス歴追加<br/>
                             2022.10.09 other ダンス歴追加<br/>
                             2022.9.10 Youtube欄追加<br/>
                             2021.7.8 プログラミングページ「CometDaysチャンネル」追加<br/>
                             2021.3.2 プログラミングページ「Qpic Virtual Festival」ゲームページ「オリガミダッシュ」追加<br/>
-                            2021.1.2 新年あけましておめでとうございます！今年も創作をちまちま頑張ります！<br/>
-                            2020.12.08 プログラミングページ「Digdea」追加<br/>
                             2020.10.27 ホームページを作成しました！<br/>
                         </div>
 
@@ -75,7 +74,7 @@ function home () {
                         <div className="blog box">
                             <h2>ブログ</h2>
                             <hr/>
-                            外部サイト「はてなブログ」にてブログをやっています。<br/>
+                            外部サイト「はてなブログ」でブログをやっています。<br/>
                             <div className="btn">
                                 <Button variant="contained" size="large" theme={myTheme}><a href="https://blog-akadra-cometdays9.hatenablog.com/">AKADRA&apos;s DIARY</a></Button>
                                 <Button variant="contained" size="large" theme={myTheme}><a href="https://zeusuakaneblog.hatenablog.com/">AKADRAのなぐりがき</a></Button>
