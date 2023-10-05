@@ -66,10 +66,10 @@ function home () {
 
                     <div className="migi">
                         <div className="twitter box">
-                            <h2>Twitter</h2>
+                            <h2>X</h2>
                             <hr/>
                             <TwitterTweetEmbed/>
-                            <a className="twitter-timeline" data-height="500" data-width="100%" data-theme="dark" href="https://twitter.com/akadra_music?ref_src=twsrc%5Etfw">Tweets by akadra_music</a>
+                            <a className="twitter-timeline" data-height="500" data-width="100%" data-theme="dark" href="https://twitter.com/akadra_music?ref_src=twsrc%5Etfw">X by akadra_music</a>
                         </div>
                         <div className="blog box">
                             <h2>ブログ</h2>
@@ -77,8 +77,10 @@ function home () {
                             外部サイト「はてなブログ」でブログをやっています。<br/>
                             <div className="btn">
                                 <Button variant="contained" size="large" theme={myTheme}><a href="https://blog-akadra-cometdays9.hatenablog.com/">AKADRA&apos;s DIARY</a></Button>
+                            </div>       
+                            <div className="btn">                                                
                                 <Button variant="contained" size="large" theme={myTheme}><a href="https://zeusuakaneblog.hatenablog.com/">AKADRAのなぐりがき</a></Button>
-                            </div>
+                            </div>     
                         </div>
                     </div>
                 </div>

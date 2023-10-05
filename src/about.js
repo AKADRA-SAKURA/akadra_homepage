@@ -6,7 +6,7 @@ import './box_container.css';
 import './about.css';
 
 import { createTheme } from '@mui/material/styles';
-import akadra1 from './images/akadra1.jpg'; 
+
 
 const myTheme = createTheme({
     palette: {
@@ -58,9 +58,9 @@ function about() {
                 <div className="about_all">
                     <div className="hidari_about">
                         <div className="photo box">
-                            <img className="profile-picture" src={akadra1} alt="akadra" />
-                            from あろす(<a href="https://twitter.com/Aros0408">@Aros0408</a>)<br/>
-                            <Button variant="contained" size="large" theme={myTheme}><a href="https://github.com/AKADRA-SAKURA">Githubアカウント</a></Button>
+                          <img className="profile-picture" src={`${process.env.PUBLIC_URL}/akadra1.jpg`} alt="akadraサムネ" />  
+                          from あろす(<a href="https://twitter.com/Aros0408">@Aros0408</a>)<br/>
+                          <Button variant="contained" size="large" theme={myTheme}><a href="https://github.com/AKADRA-SAKURA">Githubアカウント</a></Button>
                         </div>
 
                     </div>
