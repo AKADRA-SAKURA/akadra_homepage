@@ -60,6 +60,13 @@ function web () {
                     {data.map((d) => (
                         <div className="box">
                             <h1>{d.no}：「{d.title}」</h1><hr/>
+                            <div className="photo box">
+                                <img
+                                  className="profile-picture"
+                                  src={`${process.env.PUBLIC_URL}/${d.photo}`}
+                                  alt={d.title}
+                                />
+                              </div>
                             <div className='hidari'>
                                 <Button variant="contained" size="large" theme={myTheme}><a href={d.url}>URL</a></Button>
                             </div>
