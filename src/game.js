@@ -7,7 +7,6 @@ import axios from "axios";
 import './box_container.css';
 import { createTheme } from '@mui/material/styles';
 import './game.css';
-import './images/crossdx.jpg'; 
 
 
 
@@ -69,7 +68,7 @@ function game () {
                                   <div className="photo box">
                                     <img
                                       className="profile-picture"
-                                      src={`./images/${d.photo}`}
+                                      src={`${process.env.PUBLIC_URL}/${d.photo}`}
                                       alt={d.title}
                                     />
                                   </div>

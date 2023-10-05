@@ -50,11 +50,13 @@
 
 .btn{
   display:table;
+  margin: 2%;
 
 }
 .btns{
   display:table-cell;
 }
+
 
 
 @media screen and (max-width: 480px) {
