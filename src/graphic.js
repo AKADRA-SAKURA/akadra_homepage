@@ -36,7 +36,7 @@ function graphic () {
                   <div className="photo-grid">
                     {photosData.map((photo) => (
                       <div key={photo.id} className="photo-item">
-                        <img src={photo.src} alt={photo.alt} />
+                        <img src= {`${process.env.PUBLIC_URL}/${photo.src}`} alt={photo.alt} />
                         <div className="title-overlay">{photo.title}</div>
                       </div>
                     ))}
