@@ -70,6 +70,7 @@ function game () {
                                       className="profile-picture"
                                       src={`${process.env.PUBLIC_URL}/${d.photo}`}
                                       alt={d.title}
+                                      onselectstart="return false;" onmousedown="return false;"
                                     />
                                   </div>
                                 )}

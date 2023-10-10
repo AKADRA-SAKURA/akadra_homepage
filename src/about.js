@@ -58,7 +58,7 @@ function about() {
                 <div className="about_all">
                     <div className="hidari_about">
                         <div className="photo box">
-                          <img className="profile-picture" src={`${process.env.PUBLIC_URL}/akadra1.jpg`} alt="akadraサムネ" />  
+                          <img className="profile-picture" src={`${process.env.PUBLIC_URL}/akadra1.jpg`} alt="akadraサムネ" onselectstart="return false;" onmousedown="return false;"/>  
                           from あろす(<a href="https://twitter.com/Aros0408">@Aros0408</a>)<br/>
                           <Button variant="contained" size="large" theme={myTheme}><a href="https://github.com/AKADRA-SAKURA">Githubアカウント</a></Button>
                         </div>
