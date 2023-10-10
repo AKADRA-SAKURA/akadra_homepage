@@ -46,6 +46,7 @@ function home () {
                         <div className="whatsnew box">
                             <h2>WHAT&apos;S NEW</h2>
                             <hr/>
+                            2023.10.10 画像仕様変更<br/>
                             2023.07.30 ハンバーガーメニュー修正<br/>
                             2023.04.01 HPリニューアル<br/>
                             2022.12.28 other ダンス歴追加<br/>

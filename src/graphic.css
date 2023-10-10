@@ -19,6 +19,14 @@
     width: 100%;
     height: auto;
     object-fit: cover;
+    /* PCの右クリック禁止 */
+    pointer-events: none;
+    /* SPの長押し禁止 */
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -moz-touch-callout:none;
+    -moz-user-select:none;
+    user-select:none;
   }
   
   .title-overlay {
@@ -36,4 +44,23 @@
   
   .photo-item:hover .title-overlay {
     opacity: 1;
+  }
+
+  @media screen and (max-width: 480px) {
+    /* 480px以下に適用されるCSS（スマホ用） */
+    .graphic_all{
+      width: 80%;
+      margin:  0 auto;
+      display:table;
+    }
+  
+    .photo-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .photo-item {
+      position: relative;
+      flex: 0 0 calc(100% - 10px); /* 4つの写真を1行に表示 */
+    }
   }
