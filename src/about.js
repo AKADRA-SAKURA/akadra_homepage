@@ -60,7 +60,7 @@ function about() {
                         <div className="photo box">
                           <img className="profile-picture" src={`${process.env.PUBLIC_URL}/akadra1.jpg`} alt="akadraサムネ" onselectstart="return false;" onmousedown="return false;"/>  
                           from あろす(<a href="https://twitter.com/Aros0408">@Aros0408</a>)<br/>
-                          <Button variant="contained" size="large" theme={myTheme}><a href="https://github.com/AKADRA-SAKURA">Githubアカウント</a></Button>
+                          <Button variant="contained" size="large" theme={myTheme}><a href="https://github.com/AKADRA-SAKURA">Github</a></Button>
                         </div>
 
                     </div>

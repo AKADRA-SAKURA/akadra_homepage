@@ -46,18 +46,17 @@ function home () {
                         <div className="whatsnew box">
                             <h2>WHAT&apos;S NEW</h2>
                             <hr/>
+                            2023.12.17 画面微調整<br/>
                             2023.10.10 画像仕様変更<br/>
                             2023.07.30 ハンバーガーメニュー修正<br/>
                             2023.04.01 HPリニューアル<br/>
-                            2022.12.28 other ダンス歴追加<br/>
-                            2022.10.09 other ダンス歴追加<br/>
                             2022.9.10 Youtube欄追加<br/>
                             2021.7.8 プログラミングページ「CometDaysチャンネル」追加<br/>
                             2021.3.2 プログラミングページ「Qpic Virtual Festival」ゲームページ「オリガミダッシュ」追加<br/>
                             2020.10.27 ホームページを作成しました！<br/>
                         </div>
 
-                        <div className="youtube box">
+                        <div className="box">
                             <h2>Youtubeチャンネル</h2>
                             <hr/>
                             <h3><a href="https://www.youtube.com/@akadra">AKADRA Youtubeチャンネル</a></h3>
@@ -75,7 +74,7 @@ function home () {
                         <div className="blog box">
                             <h2>ブログ</h2>
                             <hr/>
-                            外部サイト「はてなブログ」でブログをやっています。<br/>
+                            外部サイト<br/>
                             <div className="btn">
                                 <Button variant="contained" size="large" theme={myTheme}><a href="https://blog-akadra-cometdays9.hatenablog.com/">AKADRA&apos;s DIARY</a></Button>
                             </div>       

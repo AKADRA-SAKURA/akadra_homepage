@@ -17,12 +17,15 @@
     width: 100%;
   }
 
+  .flex{
+    display: flex;
+  }
   .hidari{
-    width: 70%;
+    width: 60%;
     overflow: hidden;
   }
   .migi{
-    width: 30%;
+    width: 40%;
     overflow: hidden;
   }
 

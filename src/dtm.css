@@ -3,3 +3,8 @@
     margin:  0 auto;
     display:table;
   }
+
+.cd-container{
+  display: flex;
+  flex-wrap: wrap;  
+}
