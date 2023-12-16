@@ -62,32 +62,34 @@ function game () {
                     {data.map((d) => (
                         <div className="box">
                             <h1>{d.no}「{d.title}」</h1><hr/>
-                            <div className='hidari'>
-                                <Button variant="contained" size="large" theme={myTheme}><a href={d.url}>URL</a></Button>
-                                {d.photo && ( // if文をシンプルに書き換えました
-                                  <div className="photo box">
-                                    <img
-                                      className="profile-picture"
-                                      src={`${process.env.PUBLIC_URL}/${d.photo}`}
-                                      alt={d.title}
-                                      onselectstart="return false;" onmousedown="return false;"
-                                    />
-                                  </div>
-                                )}
-                            </div>
-                            <div className=''>
-                                リリース年：{d.year}<br />
-                                チーム名：{d.team}<br />
-                                チーム人数：{d.people}<br />
-                                開発期間：{d.period}<br /> 
-                                リリース場所：{d.release}<br />
-                                役割：{d.role}<br /> 
-                                説明：{d.detail}<br /> 
-                                {d.githuburl && ( // if文をシンプルに書き換えました
-                                  <Button variant="contained" size="large" theme={myTheme}>
-                                    <a href={d.githuburl}>Github URL</a>
-                                  </Button>
-                                )}
+                            <div className='flex'>
+                              <div className='hidari'>
+                                  {d.photo && ( 
+                                    <div className="photo box">
+                                      <img
+                                        className="profile-picture"
+                                        src={`${process.env.PUBLIC_URL}/${d.photo}`}
+                                        alt={d.title}
+                                        onselectstart="return false;" onmousedown="return false;"
+                                      />
+                                    </div>
+                                  )}
+                              </div>
+                              <div className='migi'>
+                                  リリース年：{d.year}<br />
+                                  チーム名：{d.team}<br />
+                                  チーム人数：{d.people}<br />
+                                  開発期間：{d.period}<br /> 
+                                  リリース場所：{d.release}<br />
+                                  役割：{d.role}<br /> 
+                                  説明：{d.detail}<br /> 
+                                  {d.githuburl && ( 
+                                    <Button variant="contained" size="large" theme={myTheme}>
+                                      <a href={d.githuburl}>Github URL</a>
+                                    </Button>
+                                  )}
+                                  <Button variant="contained" size="large" theme={myTheme}><a href={d.url}>公開先</a></Button>
+                              </div>
                             </div>
                         </div>
                     ))}

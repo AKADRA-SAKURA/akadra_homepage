@@ -53,6 +53,8 @@ function dtm () {
 
                   <h2 style={{textAlign: 'center'}}>コンピレーションアルバム</h2>
 
+                    
+                  <div className="cd-container">
                     {data.map((d) => (
                         <div className="box">
                             <h1>{d.no}「{d.title}」</h1><hr/>
@@ -61,6 +63,7 @@ function dtm () {
                                 アルバム名：{d.album}<br /> 
                         </div>
                     ))}
+                  </div>
                 </div>
             </div>
             </motion.div>

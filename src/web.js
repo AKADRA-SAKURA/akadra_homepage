@@ -59,32 +59,34 @@ function web () {
                 <div className="web_all">
                     {data.map((d) => (
                         <div className="box">
-                            <h1>{d.no}：「{d.title}」</h1><hr/>
-                            <div className="photo box">
-                                <img
-                                  className="profile-picture"
-                                  src={`${process.env.PUBLIC_URL}/${d.photo}`}
-                                  alt={d.title}
-                                  onselectstart="return false;" onmousedown="return false;"
-                                />
+                            <h1>{d.no}：「<a href={d.url}>{d.title}</a>」</h1><hr/>
+                            <div className='flex'>
+                              <div className='hidari'>
+                                <div className="photo box">
+                                    <img
+                                      className="profile-picture"
+                                      src={`${process.env.PUBLIC_URL}/${d.photo}`}
+                                      alt={d.title}
+                                      onselectstart="return false;" onmousedown="return false;"
+                                    />
+                                </div>
                               </div>
-                            <div className='hidari'>
-                                <Button variant="contained" size="large" theme={myTheme}><a href={d.url}>URL</a></Button>
-                            </div>
-                            <div className=''>
-                                <h3>{d.summary}</h3>
-                                使用言語：{d.language}<br />
-                                チーム人数：{d.people}<br /> 
-                                役割：{d.role}<br /> 
-                                説明：{d.detail}<br /> 
-                                {(() => {
-                                  if (d.githuburl) {
-                                    return <Button variant="contained" size="large" theme={myTheme}><a href={d.githuburl}>Github URL</a></Button>;
-                                  } else {
-                                    return null;
-                                  }
-                                })()}
-                            </div>
+                              <div className='migi'>
+                                  <h3>{d.summary}</h3>
+                                  使用言語：{d.language}<br />
+                                  チーム人数：{d.people}<br /> 
+                                  役割：{d.role}<br /> 
+                                  説明：{d.detail}<br /> 
+                                  {(() => {
+                                    if (d.githuburl) {
+                                      return <Button variant="contained" size="large" theme={myTheme}><a href={d.githuburl}>Github</a></Button>;
+                                    } else {
+                                      return null;
+                                    }
+                                  })()}
+                                  <Button variant="contained" size="large" theme={myTheme}><a href={d.url}>公開先</a></Button>                                    
+                                  </div>
+                            </div>  
                         </div>
                     ))}
                 </div>
