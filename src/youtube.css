@@ -1,3 +1,13 @@
-.youtube{
-  width: auto;
+.box{
+  display: flex;
+  justify-content: center;
 }
+
+.hidari{
+  width: 60%;
+}
+
+.migi{
+  width: 40%;
+}
+

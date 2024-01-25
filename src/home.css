@@ -6,85 +6,69 @@
     text-align: center;
     color: rgb(0,0,0);
   }
-  .hello{
-    width: 80%;
-    margin:  0 auto;
-    color: #000000;
-  }
 
-  .toptopics{
-    display: flex;
+  .photo-block {
+    position: relative;
     width: 100%;
-  }
-
-  .flex{
+    height: 400px; /* 任意の高さ */
+    overflow: hidden;
     display: flex;
-  }
-  .hidari{
-    width: 60%;
-    overflow: hidden;
-  }
-  .migi{
-    width: 40%;
-    overflow: hidden;
-  }
-
-  .whatsnew{
-    text-align: left;
-    color: #CFC7C2;
-    width: 90%;
-  }
-  .twitter{
-    width: 80%;
   }
   
-  .blog{
-    text-align: left;
-    color: #CFC7C2;
-    width: 80%;
+  .photo {
+    flex: 1;
+    height: 100%;
+    background-size: cover;
+    transition: transform 0.5s ease;
   }
-
-  a {
-    text-decoration: none;
+  
+  .photo.left {
+    background-color: black;
   }
-  a,a:hover,a:visited{
-    color: inherit;
-}
-
-.btn{
-  display:table;
-  margin: 2%;
-
-}
-.btns{
-  display:table-cell;
-}
+  
+  .photo.right {
+    background-color: red;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .text {
+    margin-bottom: 10px;
+  }
+  
+  .button {
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .photo-block.hovered .photo.left {
+    transform: translateX(-100%);
+  }
+  
+  .photo-block.hovered .overlay {
+    opacity: 1;
+  }  
 
 
 
 @media screen and (max-width: 480px) {
 	/* 480px以下に適用されるCSS（スマホ用） */
-  .toptopics{
-    display:contents;
-    width: 100%;
-  }
 
-  .hidari{
-    width: 100%;
-    overflow: hidden;
-  }
-  .migi{
-    width: 90%;
-    overflow:visible;
-  }
-  
-  .twitter{
-    width: 100%;
-  }
-  
-  .blog{
-    text-align: left;
-    color: #CFC7C2;
-    width: 100%;
-  }
 }
