@@ -1,86 +1,146 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import { motion } from 'framer-motion';
-import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
 import './box_container.css';
 import './home.css';
 
-import { TwitterTweetEmbed } from 'react-twitter-embed';
-import { createTheme } from '@mui/material/styles';
-import Yt from './youtube';
 
-
-
-const myTheme = createTheme({
-  palette: {
-    primary: {
-      main: "#e0e0e0",
-    },
-    secondary: {
-      main: "#424242",
-    },
-  },
-});
 
 function home () {
     useEffect(() => {
         document.title =`AKADRA Archives`
-      })
+      });
+    const [isHoveredAbout, setIsHoveredAbout] = useState(false);
+    const [isHoveredWeb, setIsHoveredWeb] = useState(false);
+    const [isHoveredGame, setIsHoveredGame] = useState(false);
+    const [isHoveredDtm, setIsHoveredDtm] = useState(false);
+    const [isHoveredGraphic, setIsHoveredGraphic] = useState(false);
+    const [isHoveredYoutube, setIsHoveredYoutube] = useState(false);
+    const [isHoveredOther, setIsHoveredOther] = useState(false);
+
+    const handleHoverAbout = () => {
+        setIsHoveredAbout(!isHoveredAbout);
+    };
+    const handleHoverWeb = () => {
+        setIsHoveredWeb(!isHoveredWeb);
+    };
+    const handleHoverGame = () => {
+        setIsHoveredGame(!isHoveredGame);
+    };
+    const handleHoverDtm = () => {
+        setIsHoveredDtm(!isHoveredDtm);
+    };
+    const handleHoverGraphic = () => {
+        setIsHoveredGraphic(!isHoveredGraphic);
+    };
+    const handleHoverYoutube = () => {
+        setIsHoveredYoutube(!isHoveredYoutube);
+    };
+    const handleHoverOther = () => {
+        setIsHoveredOther(!isHoveredOther);
+    };
       
         return (
             <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 2
-             }}
+            transition={{ duration: 2 }}
           >
         <div className="bg">
             <div className="hello">
                 <div className="hitokoto">
-                    <h2>AKADRAが制作したor参加したものをまとめたサイト<br/>
-                        プログラミング、DTM、ゲーム作品など。随時更新</h2>
+                    <h1>AKADRAの活動履歴<br/>
+                        クリエイティブな活動を気ままに</h1>
                 </div>
 
-                <div className="toptopics">
-                    <div className="hidari">
-                        <div className="whatsnew box">
-                            <h2>WHAT&apos;S NEW</h2>
-                            <hr/>
-                            2023.12.17 画面微調整<br/>
-                            2023.10.10 画像仕様変更<br/>
-                            2023.07.30 ハンバーガーメニュー修正<br/>
-                            2023.04.01 HPリニューアル<br/>
-                            2022.9.10 Youtube欄追加<br/>
-                            2021.7.8 プログラミングページ「CometDaysチャンネル」追加<br/>
-                            2021.3.2 プログラミングページ「Qpic Virtual Festival」ゲームページ「オリガミダッシュ」追加<br/>
-                            2020.10.27 ホームページを作成しました！<br/>
+                <div className='summary_box'>
+                    <div className={`photo-block ${isHoveredAbout ? 'hovered' : ''}`} onMouseEnter={handleHoverAbout} onMouseLeave={handleHoverAbout}>
+                        <div className="photo left">
+                            <div className="text">about</div>
                         </div>
-
-                        <div className="box">
-                            <h2>Youtubeチャンネル</h2>
-                            <hr/>
-                            <h3><a href="https://www.youtube.com/@akadra">AKADRA Youtubeチャンネル</a></h3>
-                            <Yt />
+                        <img className="photo right" src={`${process.env.PUBLIC_URL}/akadra1.jpg`} alt="akadraサムネ" onselectstart="return false;" onmousedown="return false;"/>  
+                        <div className="overlay">
+                            <Link to="/about" ><button className="button">about</button></Link>
+                            <div className="over_text">AKADRAについて</div>
                         </div>
                     </div>
+                </div>
 
-                    <div className="migi">
-                        <div className="twitter box">
-                            <h2>X</h2>
-                            <hr/>
-                            <TwitterTweetEmbed/>
-                            <a className="twitter-timeline" data-height="500" data-width="100%" data-theme="dark" href="https://twitter.com/akadra_music?ref_src=twsrc%5Etfw">X by akadra_music</a>
+                <div className='summary_box'>
+                    <div className={`photo-block ${isHoveredWeb ? 'hovered' : ''}`} onMouseEnter={handleHoverWeb} onMouseLeave={handleHoverWeb}>
+                        <img className="photo right" src={`${process.env.PUBLIC_URL}/digdea.png`} alt="akadraサムネ" onselectstart="return false;" onmousedown="return false;"/>  
+                        <div className="overlay">
+                            <Link to="/web" ><button className="button">Programming</button></Link>
+                            <div className="over_text">Programming活動記録</div>
                         </div>
-                        <div className="blog box">
-                            <h2>ブログ</h2>
-                            <hr/>
-                            外部サイト<br/>
-                            <div className="btn">
-                                <Button variant="contained" size="large" theme={myTheme}><a href="https://blog-akadra-cometdays9.hatenablog.com/">AKADRA&apos;s DIARY</a></Button>
-                            </div>       
-                            <div className="btn">                                                
-                                <Button variant="contained" size="large" theme={myTheme}><a href="https://zeusuakaneblog.hatenablog.com/">AKADRAのなぐりがき</a></Button>
-                            </div>     
+                        <div className="photo left">
+                            <div className="text">web</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='summary_box'>
+                    <div className={`photo-block ${isHoveredGame ? 'hovered' : ''}`} onMouseEnter={handleHoverGame} onMouseLeave={handleHoverGame}>
+                        <div className="photo left">
+                            <div className="text">Game</div>
+                        </div>
+                        <img className="photo right" src={`${process.env.PUBLIC_URL}/crossdx.jpg`} alt="akadraサムネ" onselectstart="return false;" onmousedown="return false;"/>  
+                        <div className="overlay">
+                            <Link to="/game" ><button className="button">Game</button></Link>
+                            <div className="over_text">ゲーム制作記録</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='summary_box'>
+                    <div className={`photo-block ${isHoveredDtm ? 'hovered' : ''}`} onMouseEnter={handleHoverDtm} onMouseLeave={handleHoverDtm}>
+                        <img className="photo right" src={`${process.env.PUBLIC_URL}/akadra1.jpg`} alt="akadraサムネ" onselectstart="return false;" onmousedown="return false;"/>  
+                        <div className="overlay">
+                            <Link to="/dtm" ><button className="button">DTM</button></Link>
+                            <div className="over_text">作曲活動記録</div>
+                        </div>
+                        <div className="photo left">
+                            <div className="text">DTM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='summary_box'>
+                    <div className={`photo-block ${isHoveredGraphic ? 'hovered' : ''}`} onMouseEnter={handleHoverGraphic} onMouseLeave={handleHoverGraphic}>
+                        <div className="photo left">
+                            <div className="text">Graphic</div>
+                        </div>
+                        <img className="photo right" src={`${process.env.PUBLIC_URL}/ugomemo_01.jpg`} alt="akadraサムネ" onselectstart="return false;" onmousedown="return false;"/>  
+                        <div className="overlay">
+                            <Link to="/graphic" ><button className="button">Graphic</button></Link>
+                            <div className="over_text">おえかき展示場所</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='summary_box'>
+                    <div className={`photo-block ${isHoveredYoutube ? 'hovered' : ''}`} onMouseEnter={handleHoverYoutube} onMouseLeave={handleHoverYoutube}>
+                        <img className="photo right" src={`${process.env.PUBLIC_URL}/akadra1.jpg`} alt="akadraサムネ" onselectstart="return false;" onmousedown="return false;"/>  
+                        <div className="overlay">
+                            <Link to="/youtube" ><button className="button">Youtube</button></Link>
+                            <div className="over_text">Youtube・実況活動記録</div>
+                        </div>
+                        <div className="photo left">
+                            <div className="text">youtube</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='summary_box'>
+                    <div className={`photo-block ${isHoveredOther ? 'hovered' : ''}`} onMouseEnter={handleHoverOther} onMouseLeave={handleHoverOther}>
+                        <div className="photo left">
+                            <div className="text">Other</div>
+                        </div>
+                        <img className="photo right" src={`${process.env.PUBLIC_URL}/akadra1.jpg`} alt="akadraサムネ" onselectstart="return false;" onmousedown="return false;"/>  
+                        <div className="overlay">
+                            <Link to="/other" ><button className="button">Other</button></Link>
+                            <div className="over_text">その他の活動<br />ダンスなど</div>
                         </div>
                     </div>
                 </div>

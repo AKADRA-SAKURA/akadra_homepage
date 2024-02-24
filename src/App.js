@@ -6,6 +6,7 @@ import web from './web';
 import game from './game';
 import dtm from './dtm';
 import graphic from './graphic';
+import youtube from './youtube';
 import other from './other';
 import Header from './header';
 import Footer from './footer';
@@ -23,6 +24,7 @@ function App () {
           <Route exact path="/game" component={game} />
           <Route exact path="/dtm" component={dtm} />
           <Route exact path="/graphic" component={graphic} />
+          <Route exact path="/youtube" component={youtube} />          
           <Route exact path="/other" component={other} />
           <canvas id="canvas" />
         </Switch>

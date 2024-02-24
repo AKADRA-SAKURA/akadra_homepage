@@ -1,90 +1,115 @@
-  h1, h2 {
+
+h1, h2 {
     font-weight: normal;
   }
+
+  img{
+    /* PCの右クリック禁止 */
+    pointer-events: none;
+      /* SPの長押し禁止 */
+      -webkit-touch-callout:none;
+      -webkit-user-select:none;
+      -moz-touch-callout:none;
+      -moz-user-select:none;
+      user-select:none;
+  }
+
   .hitokoto{
     padding: 1%;
     text-align: center;
     color: rgb(0,0,0);
   }
-  .hello{
-    width: 80%;
-    margin:  0 auto;
-    color: #000000;
+
+  .summary_box{
+    padding: 3% 0;
   }
 
-  .toptopics{
-    display: flex;
+  .photo-block {
+    position: relative;
     width: 100%;
-  }
-
-  .flex{
+    height: 400px; /* 任意の高さ */
+    overflow: hidden;
     display: flex;
-  }
-  .hidari{
-    width: 60%;
-    overflow: hidden;
-  }
-  .migi{
-    width: 40%;
-    overflow: hidden;
-  }
-
-  .whatsnew{
-    text-align: left;
-    color: #CFC7C2;
-    width: 90%;
-  }
-  .twitter{
-    width: 80%;
   }
   
-  .blog{
-    text-align: left;
-    color: #CFC7C2;
-    width: 80%;
+  .photo {
+    flex: 1;
+    height: 100%;
+    width: 50%;
+    background-size: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .photo.left {
+    background-color: rgba(45,37,37, 1);
+  }
+  
+  .photo.right.img {
+    height: 100%; /* 親要素に対して幅を100%に設定 */
+    width: auto; /* 高さは自動で計算される */
+    object-fit: cover; /* 縦横比を維持しつつ、はみ出た部分を隠す */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: rgba(0, 0, 0, 1);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .text {
+    margin-bottom: 10px;
+    height: 100%;
+    font-size: 70px;
+    font-family: 'Caveat', cursive;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  a {
-    text-decoration: none;
+
+  .over_text {
+    padding: 1% 0;
+    margin-bottom: 10px;
+    color: white;
   }
-  a,a:hover,a:visited{
-    color: inherit;
-}
+  
+  .button {
+    padding: 20px;
+    background-color: rgba(45,37,37, 1);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 40px;
+  }
+  
+  .photo-block.hovered .photo.left {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
 
-.btn{
-  display:table;
-  margin: 2%;
-
-}
-.btns{
-  display:table-cell;
-}
+  .photo-block.hovered .photo.right {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  
+  .photo-block.hovered .overlay {
+    opacity: 1;
+  }  
 
 
 
 @media screen and (max-width: 480px) {
 	/* 480px以下に適用されるCSS（スマホ用） */
-  .toptopics{
-    display:contents;
-    width: 100%;
-  }
 
-  .hidari{
-    width: 100%;
-    overflow: hidden;
-  }
-  .migi{
-    width: 90%;
-    overflow:visible;
-  }
-  
-  .twitter{
-    width: 100%;
-  }
-  
-  .blog{
-    text-align: left;
-    color: #CFC7C2;
-    width: 100%;
-  }
 }
