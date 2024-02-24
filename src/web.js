@@ -60,9 +60,8 @@ function web () {
                     {data.map((d) => (
                         <div className="box">
                             <h1>{d.no}：「<a href={d.url}>{d.title}</a>」</h1><hr/>
-                            <div className='flex'>
-                              <div className='hidari'>
-                                <div className="photo box">
+                            <div className='w_flex'>
+                                <div className="w_hidari photo box">
                                     <img
                                       className="profile-picture"
                                       src={`${process.env.PUBLIC_URL}/${d.photo}`}
@@ -70,8 +69,7 @@ function web () {
                                       onselectstart="return false;" onmousedown="return false;"
                                     />
                                 </div>
-                              </div>
-                              <div className='migi'>
+                              <div className='w_migi'>
                                   <h3>{d.summary}</h3>
                                   使用言語：{d.language}<br />
                                   チーム人数：{d.people}<br /> 

@@ -13,3 +13,17 @@ img{
     -moz-user-select:none;
     user-select:none;
 }
+
+.w_flex{
+  display: flex;
+  justify-content: center;
+}
+
+.w_hidari{
+  width: 60%;
+}
+
+.w_migi{
+  width: 40%;
+}
+

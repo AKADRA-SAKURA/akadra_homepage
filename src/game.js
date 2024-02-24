@@ -62,10 +62,9 @@ function game () {
                     {data.map((d) => (
                         <div className="box">
                             <h1>{d.no}「{d.title}」</h1><hr/>
-                            <div className='flex'>
-                              <div className='hidari'>
+                            <div className='g_flex'>
                                   {d.photo && ( 
-                                    <div className="photo box">
+                                    <div className="g_hidari photo box">
                                       <img
                                         className="profile-picture"
                                         src={`${process.env.PUBLIC_URL}/${d.photo}`}
@@ -74,8 +73,7 @@ function game () {
                                       />
                                     </div>
                                   )}
-                              </div>
-                              <div className='migi'>
+                              <div className='g_migi'>
                                   リリース年：{d.year}<br />
                                   チーム名：{d.team}<br />
                                   チーム人数：{d.people}<br />

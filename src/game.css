@@ -14,3 +14,16 @@ img{
     -moz-user-select:none;
     user-select:none;
 }
+
+.g_flex{
+  display: flex;
+  justify-content: center;
+}
+
+.g_hidari{
+  width: 60%;
+}
+
+.g_migi{
+  width: 40%;
+}
