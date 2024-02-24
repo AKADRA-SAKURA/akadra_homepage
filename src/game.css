@@ -14,3 +14,33 @@ img{
     -moz-user-select:none;
     user-select:none;
 }
+
+.g_flex{
+  display: flex;
+  justify-content: center;
+}
+
+.g_hidari{
+  width: 60%;
+}
+
+.g_migi{
+  width: 40%;
+}
+
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  .g_flex{
+    display: block;
+    justify-content: center;
+  }
+  .g_hidari{
+    width: 100%;
+  }
+  
+  .g_migi{
+    width: 100%;
+  }
+  
+}
