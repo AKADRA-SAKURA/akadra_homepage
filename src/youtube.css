@@ -17,3 +17,18 @@
   width: 40%;
 }
 
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  .y_box{
+    display: block;
+    justify-content: center;
+  }
+  .y_hidari{
+    width: 100%;
+  }
+  
+  .y_migi{
+    width: 100%;
+  }
+  
+}

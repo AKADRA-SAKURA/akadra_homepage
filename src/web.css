@@ -27,3 +27,19 @@ img{
   width: 40%;
 }
 
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  .w_flex{
+    display: block;
+    justify-content: center;
+  }
+  .w_hidari{
+    width: 100%;
+  }
+  
+  .w_migi{
+    width: 100%;
+  }
+  
+}
