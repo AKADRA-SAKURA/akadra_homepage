@@ -69,7 +69,7 @@ function home () {
 
                 <div className='summary_box'>
                     <div className={`photo-block ${isHoveredWeb ? 'hovered' : ''}`} onMouseEnter={handleHoverWeb} onMouseLeave={handleHoverWeb}>
-                        <img className="photo right" src={`${process.env.PUBLIC_URL}/digdea.png`} alt="akadraサムネ" onselectstart="return false;" onmousedown="return false;"/>  
+                        <img className="photo right" src={`${process.env.PUBLIC_URL}/digdea.PNG`} alt="digdea" onselectstart="return false;" onmousedown="return false;"/>  
                         <div className="overlay">
                             <Link to="/web" ><button className="button">Programming</button></Link>
                             <div className="over_text">Programming活動記録</div>
@@ -85,7 +85,7 @@ function home () {
                         <div className="photo left">
                             <div className="text">Game</div>
                         </div>
-                        <img className="photo right" src={`${process.env.PUBLIC_URL}/crossdx.jpg`} alt="akadraサムネ" onselectstart="return false;" onmousedown="return false;"/>  
+                        <img className="photo right" src={`${process.env.PUBLIC_URL}/crossdx.jpg`} alt="オリガミクロスバトルDX" onselectstart="return false;" onmousedown="return false;"/>  
                         <div className="overlay">
                             <Link to="/game" ><button className="button">Game</button></Link>
                             <div className="over_text">ゲーム制作記録</div>
@@ -111,7 +111,7 @@ function home () {
                         <div className="photo left">
                             <div className="text">Graphic</div>
                         </div>
-                        <img className="photo right" src={`${process.env.PUBLIC_URL}/ugomemo_01.jpg`} alt="akadraサムネ" onselectstart="return false;" onmousedown="return false;"/>  
+                        <img className="photo right" src={`${process.env.PUBLIC_URL}/ugomemo_01.jpg`} alt="うごメモおえかきゾロア" onselectstart="return false;" onmousedown="return false;"/>  
                         <div className="overlay">
                             <Link to="/graphic" ><button className="button">Graphic</button></Link>
                             <div className="over_text">おえかき展示場所</div>
@@ -144,6 +144,23 @@ function home () {
                         </div>
                     </div>
                 </div>
+
+                <div className='box'>
+                    <a class="twitter-timeline" data-lang="ja" data-theme="dark" href="https://twitter.com/akadra_music?ref_src=twsrc%5Etfw">Posts by akadra_music</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+
+                <div className='summary_box'>
+                    <div className={`photo-block ${isHoveredYoutube ? 'hovered' : ''}`} onMouseEnter={handleHoverYoutube} onMouseLeave={handleHoverYoutube}>
+                        <img className="photo right" src={`${process.env.PUBLIC_URL}/akadra1.jpg`} alt="akadraサムネ" onselectstart="return false;" onmousedown="return false;"/>  
+                        <div className="overlay">
+                            <a href="https://blog-akadra-cometdays9.hatenablog.com/" target="_blank"><button className="button">AKADRA's DIARY</button></a>
+                            <div className="over_text">ブログです</div>
+                        </div>
+                        <div className="photo left">
+                            <div className="text">Blog</div>
+                        </div>
+                    </div>
+                </div>                  
             </div>
         </div>
         </motion.div>
