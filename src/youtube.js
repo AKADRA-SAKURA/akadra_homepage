@@ -31,10 +31,10 @@ function youtube(){
             </div>
             <hr></hr>
             <div className="hitokoto">
-              <h1>最新動画</h1>
+              <h1>おすすめ動画</h1>
             </div>
             <div className='y_box_main'>
-              <iframe width='100%' height='auto' src="https://www.youtube.com/embed/oNn4cPeH5ls?si=BS5KkDo4aQDjhbSs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <iframe width='100%' height='auto' src="https://www.youtube.com/embed/JUObY4-rpGs?si=lXEvdwpsgAouIXMp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
             <div className="hitokoto">
               <h1>再生リスト（抜粋）</h1>
@@ -68,7 +68,27 @@ function youtube(){
               <div className='y_migi'>         
               <iframe width='100%' height='auto' src="https://www.youtube.com/embed/iqZXvBUZ3vc?si=tNI5dkwbClmdh39p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
-            </div>                      
+            </div>
+            <div className='y_box'>
+              <div className='y_migi'>
+                <iframe width='100%' height='auto' src="https://www.youtube.com/embed/zt1sGKLJTPM?si=gA1nRtpp7pg-SBHo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <div className='y_hidari'>         
+                <h2>幻日のヨハネ – NUMAZU in the MIRAGE –</h2>
+                <hr></hr>
+                <h4>ラブライブ!サンシャインのスピンオフ作品「幻日のヨハネ」をゲーム化したもの。不慣れなカードバトルにチャレンジ</h4>
+              </div>
+            </div>
+            <div className='y_box'>
+              <div className='y_hidari'>
+                <h2>ポケパークWii ピカチュウの大冒険</h2>
+                <hr></hr>
+                <h4>子供の頃からずっとやりたかったポケパークをプレイ</h4>
+              </div>
+              <div className='y_migi'>         
+              <iframe width='100%' height='auto' src="https://www.youtube.com/embed/qVvVHlWYKqA?si=1UC0wmZY2w6LZxqY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+            </div>                        
           </div>
         </div>
       </motion.div>
