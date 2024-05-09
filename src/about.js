@@ -73,16 +73,21 @@ function about() {
                                         <h2>AKADRA</h2>
                                         <hr />
                                         <div className="belongs">
-                                            【所属】{data.map((d) => (<div>{d.belongs}</div>))}<br />
+                                            <h3> 【所属】</h3>{data.map((d) => (<div>{d.belongs}</div>))}<br />
                                         </div>
                                         <hr />
                                         <div className="details">
-                                            【趣味】{data.map((d) => (<div>{d.hobby}</div>))}<br />
-                                            【好きなもの】{data.map((d) => (<div>{d.like}</div>))}<br />
-                                            【言語】{data.map((d) => (<div>{d.language}</div>))}<br />
-                                            【ツール】{data.map((d) => (<div>{d.cloud}</div>))}<br />
-                                            【プラットフォーム】{data.map((d) => (<div>{d.platform}</div>))}<br />
-                                            【DTM】 {data.map((d) => (<div>{d.dtm}</div>))}<br />
+                                            <h3>【趣味】</h3>{data.map((d) => (<div>{d.hobby}</div>))}<br />
+                                            <h3>【好きなもの】</h3>{data.map((d) => (<div>{d.like}</div>))}<br />
+                                            <h3>【推し：3次元　※記載なしは箱推し】</h3>{data.map((d) => (<div>{d.oshiJ}</div>))}<br />
+                                            <h3>【推し：アニメ系】</h3>{data.map((d) => (<div>{d.oshiAni}</div>))}<br />
+                                        </div>
+                                        <hr />
+                                        <div className="details">
+                                            <h3>【言語】</h3>{data.map((d) => (<div>{d.language}</div>))}<br />
+                                            <h3>【クラウド】</h3>{data.map((d) => (<div>{d.cloud}</div>))}<br />
+                                            <h3>【DTM】</h3> {data.map((d) => (<div>{d.dtm}</div>))}<br />
+                                            <h3>【その他KeyWord】</h3>{data.map((d) => (<div>{d.platform}</div>))}<br />
                                         </div>
                                     </div>
                                 </div>
