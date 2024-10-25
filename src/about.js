@@ -82,7 +82,7 @@ function about() {
                                         <a href="https://blog-akadra-cometdays9.hatenablog.com/" class="btn btn-blog">
                                           <i class="fa-solid fa-book-open"></i> ブログ
                                         </a><br/>
-                                        <a href="https://www.youtube.com/channel/UCZs0p_9xe5eaOnZGD9HRmCg/" class="btn btn-youtube">
+                                        <a href="https://www.instagram.com/akadra.sakura/" class="btn btn-instagram">
                                           <span class="fa-brands fa-instagram"></span> Instagram
                                         </a><br/>
                                         <a href="https://www.tiktok.com/@akadra.sakura7?lang=ja-JP" class="btn btn-tiktok">
