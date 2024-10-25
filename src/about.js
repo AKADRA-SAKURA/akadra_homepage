@@ -1,24 +1,9 @@
 import React, { useEffect, useState }  from 'react';
-import { motion } from 'framer-motion';
-import Button from '@mui/material/Button';
 import axios from "axios";
 import './box_container.css';
 import './about.css';
-import 'https://kit.fontawesome.com/eead24412f.js';
+import { motion } from 'framer-motion';
 
-import { createTheme } from '@mui/material/styles';
-
-
-const myTheme = createTheme({
-    palette: {
-      primary: {
-        main: "#e0e0e0",
-      },
-      secondary: {
-        main: "#424242",
-      },
-    },
-  });
 
 function about() {
     const [data, setData] = useState([]);
