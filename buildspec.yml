@@ -7,6 +7,7 @@ phases:
   pre_build:
     commands:
       - npm ci
-      # Retrieve YouTube API key from AWS Secrets Manager
-      - export YOUTUBE_API_KEY=$(aws secretsmanager get-secret-value --secret-id youtube-api-key --region us-east-1 --query SecretString --output text)
+      # Retrieve YouTube API key from AWS Secrets Manager (ap-northeast-1 region)
+      - export YOUTUBE_API_KEY=$(aws secretsmanager get-secret-value --secret-id youtube-api-key --region ap-northeast-1 --query SecretString --output text)
       - export REACT_APP_YOUTUBE_API_KEY=$YOUTUBE_API_KEY
+      - echo "API Key set for build"
