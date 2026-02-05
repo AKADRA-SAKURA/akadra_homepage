@@ -16,6 +16,7 @@ import Footer from './footer';
 function App () {
     return(
       <BrowserRouter>
+        <canvas id="canvas" />
         <Header> </Header>
         <Switch>
           <Route exact path="/" component={home} />
@@ -26,7 +27,6 @@ function App () {
           <Route exact path="/graphic" component={graphic} />
           <Route exact path="/youtube" component={youtube} />          
           <Route exact path="/other" component={other} />
-          <canvas id="canvas" />
         </Switch>
         <Footer> </Footer>
       </BrowserRouter>

@@ -1,23 +1,28 @@
 .box{
-    margin: 2%;
-    padding: 3%;
-    border: 2px solid #2D2525;
-    background-color: rgba(0,0,0,0.7);
-    color: #CFC7C2;
-    border-radius: 10px;
+  margin: 2%;
+  padding: 3%;
+  border: 1px solid rgba(255,255,255,0.04);
+  background-color: rgba(0,0,0,0.12);
+  color: #dfeaf8;
+  border-radius: 10px;
   }
 
   hr {
-    height: 2px;
-    background-color: rgba(45,37,37, 1);
+    height: 1px;
+    background-color: rgba(255,255,255,0.04);
     border: none;
-}
+  }
 .bg{
   margin: 0;
-  padding: 3% 0 0 0;
-  height: 200%;
-  width: 100vw;
-  z-index: 0;
+  /* offset top to avoid being covered by fixed header */
+  padding-top: calc(var(--header-height,72px) + 24px);
+  /* add bottom padding to avoid being hidden behind fixed footer */
+  padding-bottom: calc(var(--footer-height,48px) + 32px);
+  min-height: calc(100vh - var(--header-height,72px)); /* ensure full-screen coverage under header */
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 10;
 }
 button{
   z-index: 0;

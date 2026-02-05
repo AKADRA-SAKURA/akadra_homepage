@@ -1,9 +1,84 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import axios from 'axios';
 import './youtube.css';
 import './box_container.css';
 
 function youtube(){
+    const [latestVideoId, setLatestVideoId] = useState('JUObY4-rpGs');
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchLatestVideo = async () => {
+            try {
+                const apiKey = process.env.REACT_APP_YOUTUBE_API_KEY;
+                console.log('API Key loaded:', !!apiKey);
+                
+                if (!apiKey) {
+                    throw new Error('YouTube API key not found in .env');
+                }
+
+                // Direct channel ID for AKADRA
+                const channelId = 'UCZs0p_9xe5eaOnZGD9HRmCg';
+                console.log('Fetching channel:', channelId);
+
+                // Get channel uploads playlist
+                const channelResponse = await axios.get(
+                    'https://www.googleapis.com/youtube/v3/channels',
+                    {
+                        params: {
+                            part: 'contentDetails',
+                            id: channelId,
+                            key: apiKey
+                        }
+                    }
+                );
+
+                console.log('Channel response:', channelResponse.data);
+
+                if (!channelResponse.data.items || channelResponse.data.items.length === 0) {
+                    throw new Error('Channel not found. Response: ' + JSON.stringify(channelResponse.data));
+                }
+
+                const uploadPlaylistId = channelResponse.data.items[0].contentDetails.relatedPlaylists.uploads;
+                console.log('Upload playlist ID:', uploadPlaylistId);
+
+                // Get latest video from uploads playlist
+                const videosResponse = await axios.get(
+                    'https://www.googleapis.com/youtube/v3/playlistItems',
+                    {
+                        params: {
+                            part: 'snippet',
+                            playlistId: uploadPlaylistId,
+                            maxResults: 1,
+                            key: apiKey
+                        }
+                    }
+                );
+
+                console.log('Videos response:', videosResponse.data);
+
+                if (videosResponse.data.items && videosResponse.data.items.length > 0) {
+                    const videoId = videosResponse.data.items[0].snippet.resourceId.videoId;
+                    console.log('Latest video ID:', videoId);
+                    setLatestVideoId(videoId);
+                } else {
+                    console.warn('No videos found in response');
+                }
+
+                setLoading(false);
+            } catch (err) {
+                console.error('Error fetching YouTube video:', err);
+                console.error('Error details:', err.response?.data || err.message);
+                setError(err.response?.data?.error?.message || err.message || 'Unknown error');
+                setLoading(false);
+            }
+        };
+
+        fetchLatestVideo();
+    }, []);
+
     return (
       <motion.div
       animate={{
@@ -33,8 +108,10 @@ function youtube(){
             <div className="hitokoto">
               <h1>おすすめ動画</h1>
             </div>
+            {error && <div className="hitokoto" style={{color: '#ff89c6'}}>※ 最新動画の取得に失敗しました</div>}
+            {loading && <div className="hitokoto">※ 読み込み中...</div>}
             <div className='y_box_main'>
-              <iframe width='100%' height='auto' src="https://www.youtube.com/embed/JUObY4-rpGs?si=lXEvdwpsgAouIXMp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <iframe width='100%' height='auto' src={`https://www.youtube.com/embed/${latestVideoId}?si=lXEvdwpsgAouIXMp`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             </div>
             <div className="hitokoto">
               <h1>再生リスト（抜粋）</h1>

@@ -2,11 +2,22 @@
   width: 80%;
   margin:  0 auto;
   display: flex;
+  align-items: flex-start; /* prevent children stretching to equal height */
+  gap: 24px;
 }
 
 .hidari_about{
   overflow: hidden;
   width: 30%;
+}
+
+.hidari_about .box{
+  /* make left card size to its content instead of stretching */
+  display: inline-block;
+  padding: 8px;
+  background-color: rgba(0,0,0,0.08);
+  border: 1px solid rgba(255,255,255,0.03);
+  border-radius: 8px;
 }
 
 .migi_about{
@@ -17,6 +28,9 @@
 
 .profile-picture{
   width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
 }
 
 @media screen and (max-width: 480px) {
