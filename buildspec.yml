@@ -8,6 +8,20 @@ phases:
     commands:
       - npm ci
       # Retrieve YouTube API key from AWS Secrets Manager (ap-northeast-1 region)
+      - echo "Attempting to fetch API key from Secrets Manager..."
       - export YOUTUBE_API_KEY=$(aws secretsmanager get-secret-value --secret-id youtube-api-key --region ap-northeast-1 --query SecretString --output text)
+      - if [ -z "$YOUTUBE_API_KEY" ]; then echo "ERROR: API Key is empty!"; exit 1; fi
       - export REACT_APP_YOUTUBE_API_KEY=$YOUTUBE_API_KEY
-      - echo "API Key set for build"
+      - echo "API Key successfully set"
+      - echo "Node version:" && node --version
+      - echo "npm version:" && npm --version
+  build:
+    commands:
+      - echo "Starting build..."
+      - npm run build
+      - echo "Build completed successfully"
+      - ls -la build/ || echo "ERROR: build directory not found"
+artifacts:
+  base-directory: build
+  files:
+    - '**/*'
