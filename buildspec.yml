@@ -9,8 +9,8 @@ phases:
   pre_build:
     commands:
       - npm ci
-      - aws secretsmanager get-secret-value --secret-id youtube-api-key --region ap-northeast-1 --query SecretString --output text > /tmp/api_key.txt
-      - export REACT_APP_YOUTUBE_API_KEY=$(cat /tmp/api_key.txt)
+      - "aws secretsmanager get-secret-value --secret-id youtube-api-key --region ap-northeast-1 --query SecretString --output text > /tmp/api_key.txt"
+      - "export REACT_APP_YOUTUBE_API_KEY=$(cat /tmp/api_key.txt)"
       - echo "API Key loaded"
   build:
     commands:
