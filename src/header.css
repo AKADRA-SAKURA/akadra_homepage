@@ -3,10 +3,11 @@
     top: 0; /* 上部から配置の基準位置を決める */
     left: 0; /* 左から配置の基準位置を決める */
     width: 100vw; /* ヘッダーの横幅を指定する */
-    height: 5%;
-    background-color: gray;
+    height: var(--header-height); /* use unified header height */
+    min-height: 56px;
+    background: linear-gradient(90deg, rgba(5,8,20,0.85), rgba(12,22,44,0.65));
     display:flex;
-    z-index: 1;
+    z-index: 60;
   }
 
 
@@ -27,8 +28,8 @@ display:table;
   }
 
   .titlebox:hover{
-    background-color: black;
-    color: white;
+    background: rgba(255,255,255,0.02);
+    color: var(--accent-1);
   }
 
 .menu{
@@ -45,8 +46,8 @@ vertical-align:middle;
 text-align: center;
 }
 .menubox:hover{
-  background-color: black;
-  color: white;
+  background: rgba(255,255,255,0.02);
+  color: var(--accent-1);
 }
 .hamburger {
   display: none;
