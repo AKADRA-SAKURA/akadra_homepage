@@ -7,12 +7,8 @@ phases:
   pre_build:
     commands:
       - npm ci
-
-      - echo "Starting build..."
+      - aws secretsmanager get-secret-value --secret-id youtube-api-key --region ap-northeast-1 --query SecretString --output text > /tmp/api_key.txt
+      - export REACT_APP_YOUTUBE_API_KEY=$(cat /tmp/api_key.txt)
+  build:
+    commands:
       - npm run build
-      - echo "Build completed successfully"
-      - ls -la build/ || echo "ERROR: build directory not found"
-artifacts:
-  base-directory: build
-  files:
-    - '**/*'
