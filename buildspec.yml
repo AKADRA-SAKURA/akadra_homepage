@@ -3,12 +3,23 @@ version: 0.2
 phases:
   install:
     commands:
+      - node --version
+      - npm --version
       - npm install
   pre_build:
     commands:
       - npm ci
       - aws secretsmanager get-secret-value --secret-id youtube-api-key --region ap-northeast-1 --query SecretString --output text > /tmp/api_key.txt
       - export REACT_APP_YOUTUBE_API_KEY=$(cat /tmp/api_key.txt)
+      - echo "API Key loaded"
   build:
     commands:
       - npm run build
+      - echo "Build completed, checking artifacts..."
+      - ls -la build/ || echo "ERROR: No build directory"
+      - find build -type f | head -20
+
+artifacts:
+  base-directory: build
+  files:
+    - '**/*'
