@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useRef} from 'react';
+import React, {useEffect, useState} from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import './box_container.css';
@@ -11,7 +11,6 @@ function home () {
         document.title =`AKADRA Archives`
       });
     
-    const canvasRef = useRef(null);
     useEffect(() => {
         const canvas = document.getElementById('canvas');
         if (!canvas) return;
@@ -129,6 +128,29 @@ function home () {
                     <h1>AKADRAの活動履歴<br/>
                         クリエイティブな活動を気ままに</h1>
                 </div>
+                <div className="social-icons">
+                    <a className="social-icon x" href="https://x.com/akadra_music" target="_blank" rel="noreferrer" aria-label="X">
+                        <span className="fab fa-twitter fa-fw"></span>
+                    </a>
+                    <a className="social-icon bluesky" href="https://bsky.app/profile/akadrasakura.bsky.social" target="_blank" rel="noreferrer" aria-label="Bluesky">
+                        <span className="fa-brands fa-bluesky"></span>
+                    </a>
+                    <a className="social-icon youtube" href="https://www.youtube.com/channel/UCZs0p_9xe5eaOnZGD9HRmCg/" target="_blank" rel="noreferrer" aria-label="YouTube">
+                        <span className="fab fa-youtube fa-fw"></span>
+                    </a>
+                    <a className="social-icon blog" href="https://blog-akadra-cometdays9.hatenablog.com/" target="_blank" rel="noreferrer" aria-label="Blog">
+                        <i className="fa-solid fa-book-open"></i>
+                    </a>
+                    <a className="social-icon instagram" href="https://www.instagram.com/akadra.sakura/" target="_blank" rel="noreferrer" aria-label="Instagram">
+                        <span className="fa-brands fa-instagram"></span>
+                    </a>
+                    <a className="social-icon tiktok" href="https://www.tiktok.com/@akadra.sakura7?lang=ja-JP" target="_blank" rel="noreferrer" aria-label="TikTok">
+                        <span className="fa-brands fa-tiktok"></span>
+                    </a>
+                    <a className="social-icon github" href="https://github.com/AKADRA-SAKURA" target="_blank" rel="noreferrer" aria-label="GitHub">
+                        <span className="fa-brands fa-github"></span>
+                    </a>
+                </div>
 
                 <div className='summary_box'>
                     <div className={`photo-block ${isHoveredAbout ? 'hovered' : ''}`} onMouseEnter={handleHoverAbout} onMouseLeave={handleHoverAbout}>
@@ -221,10 +243,6 @@ function home () {
                     </div>
                 </div>
 
-                <div className='box'>
-                    <a class="twitter-timeline" data-lang="ja" data-theme="dark" href="https://twitter.com/akadra_music?ref_src=twsrc%5Etfw">Posts by akadra_music</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div>
-
                 <div className='summary_box'>
                     <div className={`photo-block ${isHoveredYoutube ? 'hovered' : ''}`} onMouseEnter={handleHoverYoutube} onMouseLeave={handleHoverYoutube}>
                         <img className="photo right" src={`${process.env.PUBLIC_URL}/akadra1.jpg`} alt="akadraサムネ" onselectstart="return false;" onmousedown="return false;"/>  
@@ -243,3 +261,4 @@ function home () {
         );
     }
 export default home;  
+
