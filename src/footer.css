@@ -1,9 +1,10 @@
-.footer_all{
-    position: fixed; /* ヘッダーを固定する */
-    top: 98%; /* 上部から配置の基準位置を決める */
-    left: 0; /* 左から配置の基準位置を決める */
-    width: 100vw; /* ヘッダーの横幅を指定する */
-    height: 2%;
+﻿.footer_all{
+    position: fixed; /* fixed footer */
+    bottom: 0; /* fixed to bottom */
+    left: 0;
+    width: 100vw;
+    height: var(--footer-height,48px);
+    min-height: 32px;
     background: linear-gradient(180deg, rgba(12,20,36,0.6), rgba(6,8,20,0.8));
     display:flex;
     z-index: 50;

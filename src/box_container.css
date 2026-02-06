@@ -1,4 +1,4 @@
-.box{
+﻿.box{
   margin: 2%;
   padding: 3%;
   border: 1px solid rgba(255,255,255,0.04);
@@ -29,9 +29,11 @@ button{
 }
 
 @media screen and (max-width: 480px) {
-	/* 480px以下に適用されるCSS（スマホ用） */
+	/* 480px莉･荳九↓驕ｩ逕ｨ縺輔ｌ繧気SS・医せ繝槭・逕ｨ・・*/
   .bg{
     margin: 0 0 8% 0;
-    padding: 10% 0 0 0;
+    padding-top: calc(var(--header-height,72px) + 16px);
+    padding-bottom: calc(var(--footer-height,48px) + 24px);
   }
 }
+
